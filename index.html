@@ -153,10 +153,48 @@
     font-size: 13px;
     line-height: 1.8;
     max-width: 640px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   .cs-section p:last-of-type { margin-bottom: 0; }
+
+  .manifesto-section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .manifesto-section:last-child { border-bottom: none; }
+
+  .manifesto-section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+  }
+
+  .manifesto-section p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 680px;
+    margin-bottom: 16px;
+  }
+
+  .manifesto-section p:last-of-type { margin-bottom: 0; }
+
+  .manifesto-opener {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e8e8e8;
+    line-height: 1.5;
+    max-width: 680px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #1a1a1a;
+  }
 
   .tag-row {
     display: flex;
@@ -178,11 +216,72 @@
 <nav>
   <div class="nav-brand">RC / Public Projects</div>
   <div class="nav-divider"></div>
-  <button class="nav-link" onclick="showPage('ftc')">Projects</button>
+  <button class="nav-link" onclick="showPage('manifesto', this)">GTM Engineering</button>
+  <button class="nav-link" onclick="showPage('ftc', this)">Projects</button>
 </nav>
 
-<div class="home" id="home">Select a project above</div>
+<div class="home" id="home">Select a section above</div>
 
+<!-- MANIFESTO PAGE -->
+<div class="page" id="manifesto">
+  <div class="page-label">Point of View / GTM Engineering</div>
+  <h1 class="page-title">How I Think About Go To Market</h1>
+
+  <div class="manifesto-opener">
+    Augmenting the human sales experience by creating a system is the goal. Not replacing the human seller and not automating everything. Giving the right person the right infrastructure so they can do the one thing that actually moves revenue, which is talk to the right customers at the right time.
+  </div>
+
+  <div class="manifesto-section">
+    <h2>What GTM Engineering Actually Is</h2>
+    <p>GTM engineering is the bridge between sales and systems. When those two things work in harmony the business scales. When they do not, companies hire another rep and wonder why nothing changes.</p>
+    <p>A lot of the work that individual sellers technically own, sourcing leads, writing messaging, prioritizing accounts, doing research, is work that most sellers would rather not do. It is not the part of the job that brings a true seller joy and it is not where they create the most value. The highest leverage thing a seller can do is talk to customers at the right time. GTM engineering takes everything else off their plate so they can do exactly that.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>How I Got Here</h2>
+    <p>For years as a SaaS AE I also wanted to be the person who built the sales team. I love building things and have been relentlessly curious in finding new ways to be better at my job technically speaking. If I was going to make cold calls and craft emails all day, I wanted to give myself the best possible opportunity to succeed because as I got older I realized my energy was finite and I needed to find balance in work and personal life.</p>
+    <p>In early 2025 I connected with the founder of a Salesforce consulting firm while I was still working as an AE. The goal was to build the entire go to market function from scratch. No lists, no sequences, no defined ICP, no CRM structure. Most people would have seen that as a problem. I saw it as exactly the kind of challenge I had been looking for.</p>
+    <p>By late 2025 I made the jump. The goal was to build and systemize a go to market process so that this firm could grow, generate revenue, and eventually reach a point where the founder had options to sell. That work is ongoing and the results are great. $250K in closed ARR, $700K in pipeline built. An end to end co-sell motion built from zero with Salesforce AEs across multiple verticals. A signal-based outreach system built in Clay targeting fractional leaders starting new engagements at Salesforce accounts. A direct to business motion leveraged heavily on leading with an AppExchange product that ties in with selling a managed service consulting package for the larger Salesforce org.</p>
+    <p>Building, creating, and understanding how systems and people work together to produce outcomes that neither could produce alone.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>Why GTM Engineering Makes Startups More Money</h2>
+    <p>The fastest way to scale revenue at an early stage company is not hiring more reps. It is building the system that makes the reps you already have dramatically more effective. One rep working a clean scored list with signal-based outreach and a properly structured CRM will outperform three reps working off gut instinct every time. When you fix the system underneath the sales team you get more pipeline from the same headcount, shorter sales cycles because you are reaching the right people at the right time, and a CRM that actually reflects reality so forecasting stops being a guessing game.</p>
+    <p>All go to market tactics expire. Today they expire faster than they ever have because AI makes everything easy to copy. The moment something works everyone learns about it and the tooling makes it easy to replicate. A startup without a centralized GTM system has no way to experiment fast enough to stay ahead of that. A startup with one can test a new approach, measure what happened, and iterate before the market catches up.</p>
+    <p>That ability to keep finding new edges continuously is worth more than any single tactic because it does not expire. The right human and the right system working together is what sustains a competitive advantage over time. One without the other is not enough. That is the whole point. Augmenting the human sales experience by creating a system is the goal.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>Why AI GTM Pilots Fail</h2>
+    <p>Most companies approach AI in go to market the wrong way. They either give the AI too much control or they expect it to do the wrong things entirely.</p>
+    <p>Giving the AI too much control looks like deploying an AI SDR, pointing it at a target account list, and telling it to go send emails. That works for a while and then it stops working because you have burned your domain, tired out your market, and produced messaging that has no real context behind it. The AI does not know that the engineering leader who came up through backend ops is three times more likely to respond than the one who came up through front end development. A human SDR who has been trained on your ICP knows that. An AI that has been handed a rough description of your buyer does not.</p>
+    <p>Expecting AI to do the wrong things looks like asking it to monitor your reply rates and automatically adjust your messaging based on what is working. That sounds smart but it is actually putting AI in the wrong place. AI is excellent at generating the first message. It is excellent at finding data points on accounts and contacts. It is excellent at the basic work of data labeling, data cleaning, and enrichment that nobody wants to do but that everything else depends on. It is not good at analyzing a campaign and making copy adjustments because there are too many factors it cannot see. Brand perception, product reputation, account history, market timing. A good demand gen person will do that better every time. Any system with a feedback loop should have a human at the back end of that loop.</p>
+    <p>The companies getting real results from AI in go to market are not the ones chasing the flashy agentic workflows. They are the ones doing the boring work first. Clean data, proper industry segmentation, correctly scored account lists. When that foundation is in place everything built on top of it works better automatically.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>Why I Am Different</h2>
+    <p>I have seven years of B2B SaaS sales experience. I have been a quota carrying rep my whole career and know what it feels like to be on the highest of highs and lowest of lows in terms of carrying quota.</p>
+    <p>A GTM engineer who has never carried a number builds for an idea of what a rep needs. A GTM engineer who has carried a number builds for the reality of what a rep needs. Those are different things and the output shows it. You know which shortcuts create problems downstream. You know what a rep will actually use versus what looks good in a demo. You know where the system needs to be human and where it needs to be automated. That field level intuition is not something you learn from a course or a podcast. You get it from sitting in the AE seat for years, owning a number, and feeling the pressure of an end of quarter push to hit your goal.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>What the Work Actually Looks Like</h2>
+    <p>The first thing I do at any new company is build their golden list. A scored, tiered, living list of the best target accounts in the market with the right contacts already identified, graded by fit, and updated continuously. Most companies do not have this. They have a CRM full of contacts that nobody trusts and a territory carve that was done on weak data six months ago. The golden list fixes that and guides all future moves.</p>
+    <p>From there the work is orchestration. Taking the tools available, Clay, Apollo, Salesforce, sequencing platforms, AI models, and connecting them in a way that produces something the sales team can actually use. A prioritized list of accounts with signals attached. A personalized first line written at scale. A sequence that goes out at the right time to the right person with the right message. The output always serves the rep. The system runs in the background so the rep never has to think about how it works. They just open their interface and the work is already done for them.</p>
+  </div>
+
+  <div class="manifesto-section">
+    <h2>What I Am Building Toward</h2>
+    <p>The future of GTM is a single pane of glass. One interface and everything a rep needs to do their job at the highest level, surfaced at the right moment without them having to go find it.</p>
+    <p>A rep should not live across five Chrome tabs and have information scattered that does not work cohesively. They should show up, open one screen, and know exactly who to talk to, what to say, and why today is the right time to reach out. The system generates that for them and the rep executes on high opportunity revenue generating activities.</p>
+    <p>SDRs and AEs will never be replaced, but repurposed to do more strategic selling. The goal is to give them back their edge. To take someone managing 100 accounts and give them the infrastructure to manage 1000 without burning out. To remove the noise they face from so many other things besides just actually connecting with prospects and customers. The best reps can tune everything out and get someone from stage one to closed won without letting anything get in the way. My job is to make sure none of that gets buried under bad data, generic AI messaging, and data nobody trusts.</p>
+    <p>That is what I am building toward in my next GTM Engineering role.</p>
+  </div>
+</div>
+
+<!-- FTC CASE STUDY PAGE -->
 <div class="page" id="ftc">
   <div class="page-label">Project 01 / GTM Engineering / 2024 - 2026</div>
   <h1 class="page-title">Free Thinkers Consulting</h1>
@@ -242,12 +341,12 @@
 </div>
 
 <script>
-  function showPage(id) {
+  function showPage(id, btn) {
     document.getElementById('home').style.display = 'none';
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
+    btn.classList.add('active');
   }
 </script>
 
