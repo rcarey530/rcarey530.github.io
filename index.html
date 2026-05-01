@@ -42,6 +42,69 @@
     background: #2a2a2a;
   }
 
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-toggle {
+    background: none;
+    border: none;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.15s;
+    height: 48px;
+  }
+
+  .nav-dropdown-toggle:hover { color: #d4d4d4; }
+  .nav-dropdown-toggle.active { color: #c9a84c; }
+
+  .nav-dropdown-toggle .arrow {
+    font-size: 9px;
+    color: #555;
+    transition: transform 0.15s;
+  }
+
+  .nav-dropdown:hover .arrow { transform: rotate(180deg); }
+
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #111;
+    border: 1px solid #222;
+    min-width: 200px;
+    z-index: 200;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 11px 16px;
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid #1e1e1e;
+    transition: color 0.1s, background 0.1s;
+    cursor: pointer;
+  }
+
+  .nav-dropdown-menu a:last-child { border-bottom: none; }
+
+  .nav-dropdown-menu a:hover {
+    color: #c9a84c;
+    background: #161616;
+  }
+
   .nav-link {
     background: none;
     border: none;
@@ -59,12 +122,30 @@
 
   .home {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 48px);
     margin-top: 48px;
-    color: #333;
+    color: #555;
     font-size: 13px;
+    text-align: center;
+    padding: 0 40px;
+    gap: 16px;
+  }
+
+  .home-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #c9a84c;
+    letter-spacing: -0.01em;
+  }
+
+  .home-desc {
+    font-size: 13px;
+    color: #555;
+    max-width: 480px;
+    line-height: 1.8;
   }
 
   .page {
@@ -276,6 +357,17 @@
     color: #555;
     line-height: 1.7;
   }
+
+  .coming-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 200px);
+    color: #333;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 </style>
 </head>
 <body>
@@ -283,12 +375,31 @@
 <nav>
   <div class="nav-brand">RC / Public Projects</div>
   <div class="nav-divider"></div>
-  <button class="nav-link" onclick="showPage('mindset', this)">GTM Philosophy</button>
+
+  <!-- GTM ENGINEER DROPDOWN -->
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">
+      GTM Engineer — Ryan Carey <span class="arrow">▾</span>
+    </button>
+    <div class="nav-dropdown-menu">
+      <a onclick="showPage('mindset')">GTM Philosophy</a>
+      <a onclick="showPage('ninety')">First 90 Days</a>
+      <a onclick="showPage('rhythm')">Operating Rhythm</a>
+      <a onclick="showPage('orgstructure')">Ideal Org Structure</a>
+      <a onclick="showPage('techstack')">The Tech Stack</a>
+    </div>
+  </div>
+
+  <div class="nav-divider"></div>
   <button class="nav-link" onclick="showPage('currentwork', this)">Current Work</button>
   <button class="nav-link" onclick="showPage('projects', this)">Projects</button>
 </nav>
 
-<div class="home" id="home">Select a section above</div>
+<!-- HOME STATE -->
+<div class="home" id="home">
+  <div class="home-name">Ryan Carey</div>
+  <div class="home-desc">GTM Engineer. Seven years selling B2B SaaS. Currently building the full go to market infrastructure for a Salesforce implementation partner from zero. This site documents how I think, how I build, and what I have shipped.</div>
+</div>
 
 <!-- GTM PHILOSOPHY PAGE -->
 <div class="page" id="mindset">
@@ -341,7 +452,7 @@
     <p>GTM engineering is a builder role. I am not sitting in a dashboard analyzing what went wrong last quarter. I am building the system that makes sure next quarter does not have the same problem. The workflows, the data layer, the signals, the automations, the sequences. The infrastructure that a sales team runs on every single day.</p>
     <p>The easiest way to say it is this. RevOps tells you the territory carve is wrong. I fix the data that caused the bad territory carve and build the system so it does not happen again.</p>
     <p>Most early stage companies blur these two functions together and end up with one person doing neither job well. The analytical work crowds out the building work. The ticket queue never gets cleared because there is no system underneath it. Nothing compounds because nothing is actually being built from the ground up.</p>
-    <p>RevOps and GTM engineering work best when they are separate but connected. RevOps sets the targets. GTM engineering builds the infrastructure that hits them. Without both of these teams, it is incredibly difficult for an organization to be innovative. </p>
+    <p>RevOps and GTM engineering work best when they are separate but connected. RevOps sets the targets. GTM engineering builds the infrastructure that hits them. Without both of these teams, it is incredibly difficult for an organization to be innovative.</p>
   </div>
 
   <div class="philosophy-section">
@@ -422,6 +533,66 @@
   </div>
 </div>
 
+<!-- FIRST 90 DAYS PAGE -->
+<div class="page" id="ninety">
+  <div class="page-label">GTM Engineering / First 90 Days</div>
+  <h1 class="page-title">The First 90 Days</h1>
+
+  <div class="philosophy-opener">
+    Most GTM engineers walk into a new company and immediately start touching tools. They audit the tech stack, they look at sequences, they start building before they understand what they are actually building for. That is the wrong order of operations. The first month is not about building anything. It is about understanding everything.
+  </div>
+
+  <div class="philosophy-section">
+    <h2>Days 1 to 30: Understand Before You Build</h2>
+    <p>The first question I am trying to answer when I walk through the door is simple. Why are you winning and why are you losing. Everything else flows from that.</p>
+    <p>Before a single workflow gets touched I want to understand the product or service at a deep level. Not the pitch deck version. The real version. Why do customers actually buy it. Is this a must have or a nice to have. How sticky is it once it is in the door. How complicated is the education cycle from first conversation to close. Does the ideal customer instantly understand what the product does or does it require a significant amount of explaining before they see the value. Where are deals getting lost in the process and is that a targeting problem, a messaging problem, or a product problem.</p>
+    <p>I want to understand who has already bought. I spend a significant amount of time going through every closed won deal and asking the same questions. What title did this person hold. Where were they from. What pain were they experiencing before they found us. What made them take a meeting in the first place. What made them introduce the product to their leadership team. What made them sign. That pattern is the ICP and I want to define it with enough precision that there is no margin for error when we go back to market.</p>
+    <p>I also want to understand the competitive landscape in full. What do competitors have that we do not. What do we have that competitors do not. Can we actually win the deals we are going after or are we showing up to fights we cannot win. Before any message goes to a prospect I want to know how they perceive our brand. Are they confused by the website. Does our positioning instantly click or does it require education. What does a prospect think when they see our name for the first time.</p>
+    <p>Then I look at the sales team. How are reps getting their leads today. Are they performing too many jobs besides selling. How complicated is their day to day. Are they working out of a single place or are they living across fifteen tabs. What tools are in place and are they actually working together or just sitting next to each other with no real integration. Is every conversation being recorded. Is signaling and intent data being used to find new leads or is everything manual. Who wrote the outreach messaging and is it actually good or is it AI slop that no one would respond to. Is leadership looking at a dashboard that tells them what is actually happening or are they operating on gut feel and anecdote.</p>
+    <p>I am not building anything in month one. I am embedding myself into every detail of how and why the system is operating the way it is today. That context is what separates a GTM engineer who builds the right thing from one who builds something impressive that nobody uses.</p>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>Days 31 to 60: Define and Document</h2>
+    <p>By the end of month one I have enough context to start making decisions. Month two is about turning that context into a foundation.</p>
+    <p>The ICP gets defined in full. Not a rough sketch. A scored, documented, living definition of exactly who we sell to, why they buy, what signals indicate they are ready, and what disqualifies an account before we waste time on it. This document becomes the north star for every targeting and messaging decision that follows.</p>
+    <p>The golden list gets built. A tiered, enriched list of the best target accounts in the market built on the ICP definition, layered with intent signals, job change data, firmographic fit, and technographic indicators. This is the first real deliverable and it changes how the sales team operates immediately.</p>
+    <p>But the golden list is not just a prospecting tool. It is the source of truth that makes everything else possible. Without it a company cannot be nimble. It cannot pivot quickly when the market shifts, respond to a competitor making a move, or run a new experiment with any confidence because there is no clean foundation to run it against. Every tactical decision becomes slower and more expensive because the team is always starting from scratch with incomplete or outdated information.</p>
+    <p>The list is built to be maintained and iterated on over time because the intelligence that powers it is always evolving. The market moves, signals change, new buying patterns emerge, and the ICP sharpens as more deals are won and lost. A company that keeps that list current and accurate can test a new message, a new vertical, or a new motion and know within weeks whether it is working because the foundation underneath the experiment is solid. A company without it is always guessing, always rebuilding, and always slower than it should be. The golden list is not the first project. It is the infrastructure that makes every other project work.</p>
+    <p>The full tech stack audit gets completed and documented. Every tool in the stack gets evaluated against one question. Is it doing its job and is it passing clean data to everything else. The audit does not just identify what is broken. It identifies what is possible. What could the system produce if the right infrastructure was in place. That analysis goes to leadership as a formal presentation. This is why your team is performing the way they are. This is what is costing you. This is what it looks like when it is fixed.</p>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>Days 61 to 90: Build the Infrastructure</h2>
+    <p>Month three is when the building starts. The ICP is defined. The golden list exists. The audit is complete and leadership has seen it. Now the work is connecting everything correctly so the system produces what it is supposed to produce.</p>
+    <p>The orchestration layer gets built first. The tools need to talk to each other. The CRM needs clean data flowing into it from the enrichment layer. The sequencing platform needs to be pulling from the golden list, not a random export from six months ago. The conversation intelligence tool needs to be feeding the follow-up automation. Every workflow needs to be documented so that when something breaks someone can fix it without it becoming a crisis.</p>
+    <p>The first sequences go out against the golden list with messaging that was built on what we learned in month one. Not templates. Not AI generated copy that sounds like every other email in the prospect's inbox. Messaging that reflects a genuine understanding of who this person is, what they care about, and why this product is relevant to them right now.</p>
+    <p>By day 90 the company does not feel the same as it did on day one. The reps know what accounts to work. The messaging is sharp. The tools are connected. Leadership has a dashboard that actually reflects reality. The system is running and the team has a foundation they can build on and iterate from for as long as the company exists.</p>
+    <p>That is what 90 days looks like. Not a finished product. A foundation that compounds.</p>
+  </div>
+</div>
+
+<!-- OPERATING RHYTHM PAGE -->
+<div class="page" id="rhythm">
+  <div class="page-label">GTM Engineering / Operating Rhythm</div>
+  <h1 class="page-title">Operating Rhythm</h1>
+  <div class="coming-soon">Coming soon</div>
+</div>
+
+<!-- IDEAL ORG STRUCTURE PAGE -->
+<div class="page" id="orgstructure">
+  <div class="page-label">GTM Engineering / Ideal Org Structure</div>
+  <h1 class="page-title">Ideal Org Structure</h1>
+  <div class="coming-soon">Coming soon</div>
+</div>
+
+<!-- TECH STACK PAGE -->
+<div class="page" id="techstack">
+  <div class="page-label">GTM Engineering / The Tech Stack</div>
+  <h1 class="page-title">The Tech Stack</h1>
+  <div class="coming-soon">Coming soon</div>
+</div>
+
 <!-- CURRENT WORK PAGE -->
 <div class="page" id="currentwork">
   <div class="page-label">Current Work / 2024 - 2026</div>
@@ -495,12 +666,12 @@
 </div>
 
 <script>
-  function showPage(id, btn) {
+  function showPage(id) {
     document.getElementById('home').style.display = 'none';
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    btn.classList.add('active');
   }
 </script>
 
