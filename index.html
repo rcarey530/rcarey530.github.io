@@ -249,6 +249,33 @@
     margin-bottom: 12px;
     margin-top: 24px;
   }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    margin-top: 24px;
+  }
+
+  .stack-item {
+    background: #0e0e0e;
+    padding: 20px 24px;
+  }
+
+  .stack-item-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #c9a84c;
+    margin-bottom: 6px;
+  }
+
+  .stack-item-desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+  }
 </style>
 </head>
 <body>
@@ -305,6 +332,65 @@
     <h2>Why I Am Different</h2>
     <p>I have seven years of B2B SaaS sales experience. I have been a quota carrying rep my whole career and know what it feels like to be on the highest of highs and lowest of lows in terms of carrying quota.</p>
     <p>A GTM engineer who has never carried a number builds for an idea of what a rep needs. A GTM engineer who has carried a number builds for the reality of what a rep needs. Those are different things and the output shows it. You know which shortcuts create problems downstream. You know what a rep will actually use versus what looks good in a demo. You know where the system needs to be human and where it needs to be automated. That field level intuition is not something you learn from a course or a podcast. You get it from sitting in the AE seat for years, owning a number, and feeling the pressure of an end of quarter push to hit your goal.</p>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>RevOps vs GTM Engineering</h2>
+    <p>People confuse these two all the time and it costs companies money.</p>
+    <p>RevOps is a strategy and finance adjacent role. They own forecasting, pipeline coverage, territory design, and quota setting. They are answering the question of what the numbers should be. It is important work but it is mostly analytical. They are not building the systems that generate the pipeline. They are measuring and reporting on it.</p>
+    <p>GTM engineering is a builder role. I am not sitting in a dashboard analyzing what went wrong last quarter. I am building the system that makes sure next quarter does not have the same problem. The workflows, the data layer, the signals, the automations, the sequences. The infrastructure that a sales team runs on every single day.</p>
+    <p>The easiest way to say it is this. RevOps tells you the territory carve is wrong. I fix the data that caused the bad territory carve and build the system so it does not happen again.</p>
+    <p>Most early stage companies blur these two functions together and end up with one person doing neither job well. The analytical work crowds out the building work. The ticket queue never gets cleared because there is no system underneath it. Nothing compounds because nothing is actually being built from the ground up.</p>
+    <p>RevOps and GTM engineering work best when they are separate but connected. RevOps sets the targets. GTM engineering builds the infrastructure that hits them. One without the other leaves money on the table.</p>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>The GTM Stack</h2>
+    <p>Most companies end up with too many tools that do not talk to each other. The rep lives across fifteen tabs, data lives in five different places, and nothing syncs correctly. The result is bad data, missed signals, and a sales team spending more time managing tools than talking to customers.</p>
+    <p>Every tool in the stack has to earn its place by doing one job well and passing clean data to everything else. If it does not do both it does not belong in the stack.</p>
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="stack-item-title">CRM</div>
+        <div class="stack-item-desc">Pipeline management and source of truth. Every contact, account, deal, and activity lives here. If the CRM has bad data everything downstream produces bad outcomes.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Data Enrichment and Prospecting</div>
+        <div class="stack-item-desc">List building, contact finding, firmographic and technographic data. This is where the golden list gets built. Without this layer you are prospecting blind.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">GTM Orchestration</div>
+        <div class="stack-item-desc">Connecting data sources, building workflows, and automating across the stack. The connective tissue of the entire stack. This is where most of the GTM engineering work actually happens.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Sequencing and Sales Engagement</div>
+        <div class="stack-item-desc">Email, LinkedIn, and phone outreach automation. The sequencing tool is only as good as the list it is working from. Garbage in, garbage out.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Conversation Intelligence</div>
+        <div class="stack-item-desc">Call recording, transcription, and analysis. This data feeds the follow-up automation and content generation layers. Without it the post-call workflows have nothing to work from.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Intent and Signal Data</div>
+        <div class="stack-item-desc">Identifying accounts that are in market or showing buying behavior. This is what separates a good list from a high intent list.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Content and Document Generation</div>
+        <div class="stack-item-desc">Automating decks, proposals, follow-up emails, and one-pagers. The system generates the first draft. The rep reviews and sends. What used to take an hour takes five minutes.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Business Intelligence and Reporting</div>
+        <div class="stack-item-desc">Dashboards, forecasting, and pipeline visibility. If you cannot measure it you cannot improve it.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Data Warehouse</div>
+        <div class="stack-item-desc">Storing and querying large volumes of GTM data at scale. Necessary when data volume outgrows what a CRM can handle cleanly.</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-item-title">Communication and Rep Interface</div>
+        <div class="stack-item-desc">Where reps actually live day to day. The goal is one screen that surfaces everything the rep needs without opening another tab.</div>
+      </div>
+    </div>
+    <p style="margin-top: 24px;">Every tool in the stack serves the rep. If it does not make the rep more effective it does not belong.</p>
   </div>
 
   <div class="philosophy-section">
