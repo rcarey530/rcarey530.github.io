@@ -17,16 +17,13 @@ The intersection of sales experience and systems thinking is where I work. I hav
 
 ---
 
-## > Results
----
-
 ## > GTM Stack
 
 **Prospecting & Enrichment**
 
 ![Clay](https://img.shields.io/badge/Clay-000000?style=flat)
 ![Apollo](https://img.shields.io/badge/Apollo.io-000000?style=flat)
-![LinkedIn Sales Navigator](https://img.shields.io/badge/LinkedIn_Sales_Nav-0077B5?style=flat&logo=linkedin)
+
 
 **Sequencing & Outreach**
 
