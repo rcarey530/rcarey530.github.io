@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-RYAN CAREY
+**Ryan Carey
 
 **GTM Engineer · San Diego, CA**
 
