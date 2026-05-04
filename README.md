@@ -1,4 +1,8 @@
-# Ryan Carey
+## Hi there 👋
+
+<div align="center">
+
+<img width="100%" height="4px" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,2,5,30&height=4"/>
 
 **GTM Engineer · San Diego, CA**
 
