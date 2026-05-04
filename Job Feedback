@@ -1,0 +1,87 @@
+# Job Search ICP and Scoring Criteria
+# Claude uses this file to score job opportunities pulled by the n8n pipeline
+# Score each job 1-10 based on how well it matches this ICP
+# Include a brief reason for the score and a recommended action (apply, skip, monitor)
+
+---
+
+## WHO I AM
+Seven years of B2B SaaS sales experience as a quota carrying AE. Currently building the full GTM infrastructure for a Salesforce implementation partner from zero. Salesforce Admin certified. Core skills are outbound pipeline generation, Clay workflows, Apollo list building, CRM architecture, sales sequence strategy, and GTM automation. I build systems for outbound sales teams and I have carried a number long enough to know what reps actually need.
+
+---
+
+## TARGET COMPANY PROFILE
+- Stage: Seed to Series B
+- Headcount: 5 to 300 employees
+- Geography: Remote first or San Diego hybrid strongly preferred
+- Industry: All B2B SaaS and tech adjacent verticals
+- Funding: Raised in last 18 months is a strong positive signal
+- Motion: Company must have an outbound sales motion or be actively building one
+
+---
+
+## TARGET ROLE PROFILE
+- Titles that are a strong fit: GTM Engineer, Revenue Operations, Sales Operations, Growth Operations, Head of Growth, GTM Operations, RevOps Manager
+- The role must include systems building responsibility for outbound pipeline generation
+- Compensation target: $80K to $150K base
+- Roles that are purely cold calling, SDR management, or account management are not a fit
+
+---
+
+## TIER ONE SIGNALS — Score 8 to 10
+Award a high score if the job or company shows any of these signals:
+- Company has an active outbound sales team with no GTM infrastructure underneath it yet
+- Job posting or company stack mentions Clay, Apollo, or similar GTM tooling
+- Company raised a Series A or B in the last 12 months
+- Role is explicitly titled GTM Engineer or GTM Operations
+- Company is based in San Diego
+- Role description mentions building from scratch, first GTM hire, or standing up infrastructure
+
+---
+
+## TIER TWO SIGNALS — Score 5 to 7
+Award a mid score if the job or company shows any of these signals:
+- Company raised Series A or B in the last 24 months
+- Job posting mentions specific tools like Salesforce, HubSpot, Apollo, sequencing platforms, or data enrichment
+- Company has a VP of Sales or CRO but no dedicated GTM engineering or ops hire yet
+- Role mentions building from scratch or being the first ops hire
+- B2B tech company of any vertical with a clear sales motion
+
+---
+
+## TIER THREE SIGNALS — Score 3 to 4
+Award a lower score if the job or company shows any of these signals:
+- Seed stage company with early revenue traction and a strong founding team
+- Job posting mentions outbound, pipeline generation, or sales infrastructure without using GTM engineering language
+- Remote first company outside San Diego with strong product market fit signals
+- Company has recently posted SDR or AE roles suggesting they are actively building a sales team
+
+---
+
+## HARD EXCLUSIONS — Score 0 to 2
+Automatically score low and recommend skip if any of these apply:
+- Consumer products targeting women
+- Role is SDR or cold calling disguised as GTM engineering
+- Company has fewer than 5 employees
+- Role is outside the United States
+- Role is purely inbound, account management, or customer success with no outbound pipeline component
+- No mention of systems, tools, automation, or infrastructure anywhere in the job description
+
+---
+
+## SCORING INSTRUCTIONS FOR CLAUDE
+For each job posting evaluate the following and produce a score from 1 to 10:
+
+1. Does the role title match the target role profile
+2. Does the company stage and size match the target company profile
+3. How many tier one signals are present
+4. How many tier two signals are present
+5. Are any hard exclusions triggered
+
+Output format for each job:
+- Job Title
+- Company Name
+- Score (1-10)
+- Tier (1, 2, or 3)
+- Top reason this is or is not a fit in one sentence
+- Recommended action (Apply Now, Monitor, or Skip)
