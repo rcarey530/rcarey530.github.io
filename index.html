@@ -368,6 +368,76 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+
+  .job-row {
+    border: 1px solid #1e1e1e;
+    padding: 20px 24px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.15s;
+  }
+
+  .job-row:hover { border-color: #2a2a2a; }
+
+  .job-company {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e8e8e8;
+    margin-bottom: 4px;
+  }
+
+  .job-title {
+    font-size: 12px;
+    color: #555;
+  }
+
+  .job-location {
+    font-size: 11px;
+    color: #444;
+    margin-top: 4px;
+  }
+
+  .job-reason {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .job-meta {
+    text-align: right;
+  }
+
+  .job-tier {
+    font-size: 11px;
+    font-weight: 600;
+    color: #c9a84c;
+    margin-bottom: 6px;
+  }
+
+  .job-stat {
+    font-size: 11px;
+    color: #444;
+    margin-bottom: 4px;
+  }
+
+  .job-link {
+    font-size: 10px;
+    color: #c9a84c;
+    text-decoration: none;
+    border: 1px solid #c9a84c;
+    padding: 3px 8px;
+    display: inline-block;
+    margin-top: 6px;
+    transition: background 0.15s;
+  }
+
+  .job-link:hover {
+    background: #c9a84c;
+    color: #0e0e0e;
+  }
 </style>
 </head>
 <body>
@@ -430,14 +500,14 @@
     <p>That ability to keep finding new edges continuously is worth more than any single tactic because it does not expire. The right human and the right system working together is what sustains a competitive advantage over time. One without the other is not enough to be the best. Augmenting the human sales experience by creating a system is the goal.</p>
   </div>
 
-<div class="philosophy-section">
+  <div class="philosophy-section">
     <h2>Why AI GTM Pilots Fail</h2>
     <p>Most companies approach AI in go to market the wrong way. They either give the AI too much control or expect it to do the wrong things entirely.</p>
     <p>AI is only as good as the systems underneath it. Most companies jump to AI SDRs without realizing their CRM is a mess. Bad data used to cause inefficiency. Now it gets automated at scale. The AI assumes the data is true. It does not judge correctness. It just predicts based on inputs.</p>
     <p>Giving the AI too much control looks like deploying an AI SDR, pointing it at a target account list, and letting it send emails. That works briefly. Then it stops working because you burned your domain, tired out your market, and produced messaging with no real context. The AI does not know that the engineering leader who came up through backend ops is three times more likely to respond than the one who came up through front end. A human SDR trained on your ICP develops that judgment through experience. An AI handed a rough buyer description does not.</p>
     <p>Expecting AI to do the wrong things looks like asking it to monitor reply rates and automatically adjust messaging. That sounds smart but puts AI in the wrong place. AI is excellent at generating first messages, finding data points on accounts, and doing the basic work of data labeling and enrichment that nobody wants to do but everything depends on. It is not good at analyzing campaigns and making copy adjustments because it cannot see brand perception, product reputation, account history, or market timing. A good demand gen person will do that better every time. Any system with a feedback loop should have a human at the back end.</p>
     <p>The companies getting real results from AI in go to market are not chasing flashy agentic workflows. They are doing the boring work first. Clean data, proper industry segmentation, correctly scored account lists. When that foundation is in place everything built on top of it works better automatically.</p>
-</div>
+  </div>
 
   <div class="philosophy-section">
     <h2>Why I Am Different</h2>
@@ -946,11 +1016,61 @@
   <h1 class="page-title">Projects</h1>
   <p class="page-desc">A running log of GTM engineering builds, workflows, and experiments. Each project is a real system built for a real problem.</p>
 
- <div class="project-card">
-  <span class="project-status">In Progress</span>
-  <h3>Weekly GTM Company Golden List</h3>
-  <p>Every Wednesday morning a Clay workflow automatically sources 15 companies across three tiers that match my GTM Engineer job search ICP. Each company is enriched with headcount, funding, tech stack, sales team size, open roles, and a careers page link. The list is scored and tiered automatically and published here every week. This is the same system I would build for a sales team applied to my own job search.</p>
-</div>
+  <div class="project-card">
+    <span class="project-status">In Progress</span>
+    <h3>How to Use GTM Engineering to Land Your First GTM Engineering Job</h3>
+    <p>Using the same tools and systems a GTM engineer would build for a company, applied to a personal job search. Building the golden list, signal-based outreach, Clay enrichment workflows, and a public portfolio to demonstrate the work in real time.</p>
+  </div>
+
+  <div class="project-card">
+    <span class="project-status">Live</span>
+    <h3>Weekly GTM Job Search Golden List</h3>
+    <p>Every Wednesday a Clay workflow automatically sources job opportunities matching my GTM Engineer ICP, enriches each one with company data and funding signals, scores them against my criteria, and publishes the results here. This is the same system I would build for a sales team applied to my own job search.</p>
+  </div>
+
+  <div id="golden-list-container" style="margin-top: 32px;">
+    <div style="font-size: 11px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">
+      Weekly Golden List / <span id="golden-list-date" style="color: #444;"></span>
+    </div>
+    <div id="golden-list-table"></div>
+  </div>
+
+  <script>
+    fetch('golden-list.json')
+      .then(r => r.json())
+      .then(data => {
+        if (data.lastUpdated) {
+          const date = new Date(data.lastUpdated);
+          document.getElementById('golden-list-date').textContent = 'Updated ' + date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        }
+        if (!data.jobs || data.jobs.length === 0) {
+          document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">No jobs loaded yet. Check back Wednesday.</p>';
+          return;
+        }
+        const rows = data.jobs.map(job => `
+          <div class="job-row">
+            <div>
+              <div class="job-company">${job.company}</div>
+              <div class="job-title">${job.jobTitle}</div>
+              <div class="job-location">${job.location}</div>
+            </div>
+            <div>
+              <div class="job-reason">${job.reason || ''}</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-tier">Tier ${job.score || ''}</div>
+              <div class="job-stat">${job.employees ? Number(job.employees).toLocaleString() + ' employees' : ''}</div>
+              <div class="job-stat">${job.funding ? '$' + Number(job.funding).toLocaleString() + ' raised' : ''}</div>
+              ${job.jobUrl ? `<a href="${job.jobUrl}" target="_blank" class="job-link">View Job</a>` : ''}
+            </div>
+          </div>
+        `).join('');
+        document.getElementById('golden-list-table').innerHTML = rows;
+      })
+      .catch(() => {
+        document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">Unable to load job data.</p>';
+      });
+  </script>
 </div>
 
 <script>
