@@ -382,6 +382,67 @@
 
   .job-row:hover { border-color: #2a2a2a; }
 
+.feedback-btn {
+    font-size: 10px;
+    color: #555;
+    background: none;
+    border: 1px solid #2a2a2a;
+    padding: 3px 8px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 4px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .feedback-btn:hover {
+    border-color: #555;
+    color: #888;
+  }
+
+  .feedback-form {
+    display: none;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #1e1e1e;
+    background: #111;
+  }
+
+  .feedback-form textarea {
+    width: 100%;
+    background: #0e0e0e;
+    border: 1px solid #2a2a2a;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    padding: 8px;
+    resize: none;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .feedback-submit {
+    font-size: 10px;
+    color: #c9a84c;
+    background: none;
+    border: 1px solid #c9a84c;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.15s;
+  }
+
+  .feedback-submit:hover {
+    background: #c9a84c;
+    color: #0e0e0e;
+  }
+
+  .feedback-sent {
+    font-size: 11px;
+    color: #555;
+    margin-top: 6px;
+  }
+
   .job-company {
     font-size: 13px;
     font-weight: 600;
@@ -1043,7 +1104,7 @@
           document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">No jobs loaded yet. Check back Wednesday.</p>';
           return;
         }
-        const rows = data.jobs.map(job => `
+        const rows = data.jobs.map((job, index) => `
           <div class="job-row">
             <div>
               <div class="job-company">${job.company}</div>
@@ -1058,6 +1119,12 @@
               <div class="job-stat">${job.employees ? Number(job.employees).toLocaleString() + ' employees' : ''}</div>
               <div class="job-stat">${job.funding ? '$' + Number(job.funding).toLocaleString() + ' raised' : ''}</div>
               ${job.jobUrl ? `<a href="${job.jobUrl}" target="_blank" class="job-link">View Job</a>` : ''}
+              <button class="feedback-btn" onclick="toggleFeedback(${index})">Not a Fit</button>
+              <div class="feedback-form" id="feedback-${index}">
+                <textarea id="reason-${index}" placeholder="Why is this not a fit?"></textarea>
+                <button class="feedback-submit" onclick="submitFeedback(${index}, '${job.company.replace(/'/g, "\\'")}', '${job.jobTitle.replace(/'/g, "\\'")}', '${job.score || ''}')">Submit</button>
+                <div class="feedback-sent" id="sent-${index}"></div>
+              </div>
             </div>
           </div>
         `).join('');
@@ -1085,6 +1152,27 @@
     } else {
       container.style.display = 'none';
     }
+  }
+
+  function toggleFeedback(index) {
+    const form = document.getElementById('feedback-' + index);
+    form.style.display = form.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function submitFeedback(index, company, jobTitle, score) {
+    const reason = document.getElementById('reason-' + index).value;
+    if (!reason.trim()) return;
+    const date = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    fetch('https://rcarey.app.n8n.cloud/webhook/job-feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ company, jobTitle, score, reason, date })
+    }).then(() => {
+      document.getElementById('sent-' + index).textContent = 'Feedback logged.';
+      document.getElementById('reason-' + index).value = '';
+    }).catch(() => {
+      document.getElementById('sent-' + index).textContent = 'Something went wrong. Try again.';
+    });
   }
 </script>
 </body>
