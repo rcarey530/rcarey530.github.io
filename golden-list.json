@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T23:28:27.573Z",
+  "lastUpdated": "2026-05-14T23:28:36.779Z",
   "totalJobs": 4,
   "jobs": [
     {
@@ -7,7 +7,7 @@
       "jobTitle": "Manager, Sales Operations & Sales Force Effectiveness",
       "location": "",
       "score": 2,
-      "reason": "Good job responsibilities match, but two concerns: 1) Manager level may be slightly senior, 2) Requires pharma industry knowledge which you lack. Worth monitoring if you can bridge the industry knowledge gap.",
+      "reason": "Good job based on responsibilities, but requires pharma industry knowledge which you don't have. Manager level may be a stretch. Worth monitoring if requirements are flexible.",
       "action": "",
       "jobUrl": "",
       "employees": "",
@@ -19,7 +19,7 @@
       "jobTitle": "Vice President, Revenue Operations",
       "location": "",
       "score": 3,
-      "reason": "VP level position is too senior for your current experience level. This is a hard exclusion based on seniority mismatch.",
+      "reason": "VP level position - you are not at VP level yet. This is above your current experience level.",
       "action": "",
       "jobUrl": "",
       "employees": "",
@@ -31,7 +31,7 @@
       "jobTitle": "GTM Operations Analyst",
       "location": "",
       "score": 3,
-      "reason": "Company is too large. You are specifically targeting Series A or Series B startups, and this company does not meet that criteria.",
+      "reason": "Company is too big. You are looking for Series A or Series B startups only.",
       "action": "",
       "jobUrl": "",
       "employees": "",
@@ -43,7 +43,7 @@
       "jobTitle": "Business Operations (BizOps) Associate",
       "location": "",
       "score": 3,
-      "reason": "Job posted two weeks ago and no longer accepting applications. Should focus on jobs posted within the last 3 days for better conversion rates.",
+      "reason": "Job posted two weeks ago and no longer accepting applications. Need to focus on jobs posted within the last 3 days.",
       "action": "",
       "jobUrl": "",
       "employees": "",
