@@ -1,0 +1,63 @@
+{
+  "lastUpdated": "",
+  "icpCriteria": {
+    "targetTitles": [
+      "GTM Engineer",
+      "Revenue Operations",
+      "Sales Operations",
+      "Growth Operations",
+      "Head of Growth",
+      "GTM Operations",
+      "RevOps Manager"
+    ],
+    "targetCompany": {
+      "stage": ["Seed", "Series A", "Series B"],
+      "headcount": "5 to 300",
+      "geography": "Remote first or San Diego hybrid",
+      "industry": "B2B SaaS and tech adjacent",
+      "funding": "Raised in last 18 months is a strong positive signal",
+      "motion": "Must have outbound sales motion or be actively building one"
+    },
+    "hardExclusions": [
+      "Consumer products targeting women",
+      "Pure SDR or cold calling role",
+      "Fewer than 5 employees",
+      "Outside the United States",
+      "Purely inbound or account management with no outbound component"
+    ],
+    "tier1Signals": [
+      "Active outbound sales team with no GTM infrastructure",
+      "Job posting mentions Clay, Apollo, or GTM tooling",
+      "Series A or B raised in last 12 months",
+      "Role explicitly titled GTM Engineer or GTM Operations",
+      "Company based in San Diego",
+      "Role mentions building from scratch or first GTM hire"
+    ],
+    "tier2Signals": [
+      "Series A or B raised in last 24 months",
+      "Job posting mentions Salesforce, HubSpot, Apollo, or sequencing platforms",
+      "Company has VP Sales or CRO but no dedicated GTM ops hire",
+      "Role mentions being first ops hire",
+      "B2B tech company with clear clear sales motion"
+    ],
+    "tier3Signals": [
+      "Seed stage with early revenue traction",
+      "Job posting mentions outbound or pipeline generation",
+      "Remote first outside San Diego with strong PMF signals",
+      "Company recently posted SDR or AE roles"
+    ]
+  },
+  "feedbackPatterns": [
+    {
+      "pattern": "Companies with over 500 employees are too large for target ICP",
+      "action": "Score lower and recommend Skip",
+      "source": "feedback"
+    },
+    {
+      "pattern": "VP level roles are too senior for current experience level",
+      "action": "Score lower and recommend Skip",
+      "source": "feedback"
+    }
+  ],
+  "scoringInstructions": "Score each job 1 to 3. Score 1 means apply now. Score 2 means monitor. Score 3 means skip. Use the ICP criteria and feedback patterns above to determine the score. Jobs with hard exclusions automatically score 3. Jobs with multiple Tier 1 signals score 1. Everything else falls in between based on signal strength."
+}
