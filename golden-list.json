@@ -1,30 +1,54 @@
 {
-  "lastUpdated": "2026-05-14T23:14:20.806Z",
-  "totalJobs": 2,
+  "lastUpdated": "2026-05-14T23:28:27.573Z",
+  "totalJobs": 4,
   "jobs": [
     {
-      "company": "Medra",
-      "jobTitle": "Business Operations",
-      "location": "San Francisco, CA",
+      "company": "Galderma",
+      "jobTitle": "Manager, Sales Operations & Sales Force Effectiveness",
+      "location": "",
       "score": 2,
-      "reason": "Employee count of 42 fits squarely in the 5–100 Tier 1 range, Medra raised a $52M Series A in December 2025 (within last 12 months), and it is a confirmed B2B early-stage tech company; however, the job title is \"Business Operations\" rather than \"GTM Engineer\" or \"GTM Operations,\" which prevents a top-tier score.",
-      "action": "Monitor",
-      "jobUrl": "https://www.linkedin.com/jobs/view/business-operations-at-medra-4413239131",
-      "employees": 42,
-      "funding": 52000000,
-      "postedOn": "2026-05-12T01:54:55.000Z"
+      "reason": "Good job responsibilities match, but two concerns: 1) Manager level may be slightly senior, 2) Requires pharma industry knowledge which you lack. Worth monitoring if you can bridge the industry knowledge gap.",
+      "action": "",
+      "jobUrl": "",
+      "employees": "",
+      "funding": "",
+      "postedOn": ""
     },
     {
-      "company": "Nonlinear",
-      "jobTitle": "Sales/GTM Engineer Intern",
-      "location": "San Francisco, CA",
-      "score": 2,
-      "reason": "Employee count of 5 and Seed funding from September 2025 (within 12 months) confirm an ideal early-stage B2B SaaS/tech fit, and the title contains \"GTM Engineer,\" but the \"Intern\" designation signals a junior/non-senior role that reduces alignment with a 7-year experienced ICP candidate.",
-      "action": "Monitor",
-      "jobUrl": "https://www.linkedin.com/jobs/view/sales-gtm-engineer-intern-at-nonlinear-4406246588",
-      "employees": 5,
-      "funding": 1100000,
-      "postedOn": "2026-04-29T00:33:54.484Z"
+      "company": "Kastle Systems",
+      "jobTitle": "Vice President, Revenue Operations",
+      "location": "",
+      "score": 3,
+      "reason": "VP level position is too senior for your current experience level. This is a hard exclusion based on seniority mismatch.",
+      "action": "",
+      "jobUrl": "",
+      "employees": "",
+      "funding": "",
+      "postedOn": ""
+    },
+    {
+      "company": "Flowcode",
+      "jobTitle": "GTM Operations Analyst",
+      "location": "",
+      "score": 3,
+      "reason": "Company is too large. You are specifically targeting Series A or Series B startups, and this company does not meet that criteria.",
+      "action": "",
+      "jobUrl": "",
+      "employees": "",
+      "funding": "",
+      "postedOn": ""
+    },
+    {
+      "company": "InfrasAI",
+      "jobTitle": "Business Operations (BizOps) Associate",
+      "location": "",
+      "score": 3,
+      "reason": "Job posted two weeks ago and no longer accepting applications. Should focus on jobs posted within the last 3 days for better conversion rates.",
+      "action": "",
+      "jobUrl": "",
+      "employees": "",
+      "funding": "",
+      "postedOn": ""
     }
   ]
 }
