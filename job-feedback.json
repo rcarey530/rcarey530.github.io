@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T21:49:31.450Z",
+  "lastUpdated": "2026-05-15T21:54:21.638Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -78,8 +78,8 @@
       "source": "feedback"
     },
     {
-      "pattern": "Job postings older than two weeks are no longer accepting applications",
-      "action": "Score 3 (Skip) - focus on jobs posted within last 3 days for best response rates",
+      "pattern": "Job postings older than 2 weeks are no longer accepting applications",
+      "action": "Score 3 (Skip) - prioritize jobs posted within last 3 days for active application windows",
       "source": "feedback"
     }
   ],
