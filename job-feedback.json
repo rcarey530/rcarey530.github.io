@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T00:14:56.179Z",
+  "lastUpdated": "2026-05-15T21:49:31.450Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -75,6 +75,11 @@
     {
       "pattern": "Roles requiring deep industry-specific knowledge outside tech/SaaS (e.g., pharma)",
       "action": "Score 3 (Skip) - candidate does not have specialized industry experience",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Job postings older than two weeks are no longer accepting applications",
+      "action": "Score 3 (Skip) - focus on jobs posted within last 3 days for best response rates",
       "source": "feedback"
     }
   ],
