@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "",
+  "lastUpdated": "2026-05-15T00:14:56.179Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -11,7 +11,11 @@
       "RevOps Manager"
     ],
     "targetCompany": {
-      "stage": ["Seed", "Series A", "Series B"],
+      "stage": [
+        "Seed",
+        "Series A",
+        "Series B"
+      ],
       "headcount": "5 to 300",
       "geography": "Remote first or San Diego hybrid",
       "industry": "B2B SaaS and tech adjacent",
@@ -50,12 +54,27 @@
   "feedbackPatterns": [
     {
       "pattern": "Companies with over 500 employees are too large for target ICP",
-      "action": "Score lower and recommend Skip",
+      "action": "Score 3 (Skip) - candidate is specifically targeting Series A or B startups",
       "source": "feedback"
     },
     {
       "pattern": "VP level roles are too senior for current experience level",
-      "action": "Score lower and recommend Skip",
+      "action": "Score 3 (Skip) - candidate is not at VP level yet",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Manager level roles may be too senior depending on requirements",
+      "action": "Score 2 (Monitor) - evaluate based on specific requirements and industry knowledge needed",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Job postings older than 3 days may no longer be accepting applications",
+      "action": "Deprioritize or Skip - focus on jobs posted within last 3 days",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles requiring deep industry-specific knowledge outside tech/SaaS (e.g., pharma)",
+      "action": "Score 3 (Skip) - candidate does not have specialized industry experience",
       "source": "feedback"
     }
   ],
