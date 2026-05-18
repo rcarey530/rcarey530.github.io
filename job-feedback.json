@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T23:41:11.324Z",
+  "lastUpdated": "2026-05-18T15:00:52.884Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -80,6 +80,11 @@
     {
       "pattern": "Job postings older than 2 weeks are no longer accepting applications",
       "action": "Score 3 (Skip) - prioritize jobs posted within last 3 days for active application windows",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Companies that are 'way too big' relative to Series A/B startup target",
+      "action": "Score 3 (Skip) - candidate is specifically looking for Series A or B startup scale only",
       "source": "feedback"
     }
   ],
