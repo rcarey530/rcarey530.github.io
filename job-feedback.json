@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T15:00:45.445Z",
+  "lastUpdated": "2026-05-26T15:00:44.768Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -85,6 +85,11 @@
     {
       "pattern": "Companies that are 'way too big' relative to Series A/B startup target",
       "action": "Score 3 (Skip) - candidate is specifically looking for Series A or B startup scale only",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Analyst level roles may be too junior depending on title and scope",
+      "action": "Score 2 (Monitor) - evaluate if responsibilities align with GTM Engineer scope despite junior title",
       "source": "feedback"
     }
   ],
