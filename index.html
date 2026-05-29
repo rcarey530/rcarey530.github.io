@@ -1084,7 +1084,11 @@
     <h3>Weekly GTM Job Search List ↓</h3>
     <p>Every Wednesday a Clay workflow automatically sources job opportunities matching my GTM Engineer ICP, enriches each one with company data and funding signals, scores them against my criteria, and publishes the results here. This is the same system I would build for a sales team applied to my own job search.</p>
   </div>
-
+<div class="project-card" style="cursor: pointer; margin-top: 16px;" onclick="window.open('https://gtm-analytics-production.up.railway.app', '_blank')">
+  <span class="project-status">Live</span>
+  <h3>GTM Analytics Query Interface ↗</h3>
+  <p>A Snowflake-style SQL query interface built on top of the job search pipeline data. Pulls live job history from Google Sheets into a SQLite database on startup and lets you run any SQL query against it. Built with TypeScript, Express, and sql.js, deployed on Railway. Demonstrates backend engineering, database querying, and production deployment as part of the broader GTM job search automation system.</p>
+</div>
   <div id="golden-list-container" style="margin-top: 32px; display: none;">
     <div style="font-size: 11px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">
       Weekly Job List / <span id="golden-list-date" style="color: #444;"></span>
