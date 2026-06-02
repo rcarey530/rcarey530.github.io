@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T15:00:44.768Z",
+  "lastUpdated": "2026-06-02T15:00:49.898Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -90,6 +90,31 @@
     {
       "pattern": "Analyst level roles may be too junior depending on title and scope",
       "action": "Score 2 (Monitor) - evaluate if responsibilities align with GTM Engineer scope despite junior title",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles requiring on-site presence outside San Diego",
+      "action": "Score 2 (Monitor) or Score 3 (Skip) - candidate prefers remote or San Diego hybrid, deprioritize locations like San Francisco that require on-site",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles primarily focused on HubSpot when Salesforce is preferred",
+      "action": "Score 2 (Monitor) - candidate has Salesforce Admin certification and prefers Salesforce over HubSpot",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Deal Desk Specialist roles focused on contract administration and pricing",
+      "action": "Score 3 (Skip) - these are transactional roles, not GTM building roles",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Order management and logistics-focused operations roles",
+      "action": "Score 3 (Skip) - candidate is looking for GTM building roles, not order processing or fulfillment operations",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles requiring technical or engineered product support experience",
+      "action": "Score 3 (Skip) - candidate does not have technical product support background",
       "source": "feedback"
     }
   ],
