@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-02T15:00:49.898Z",
+  "lastUpdated": "2026-06-09T15:01:03.618Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -115,6 +115,26 @@
     {
       "pattern": "Roles requiring technical or engineered product support experience",
       "action": "Score 3 (Skip) - candidate does not have technical product support background",
+      "source": "feedback"
+    },
+    {
+      "pattern": "BizOps Associate roles at companies where posting is 2+ weeks old",
+      "action": "Score 3 (Skip) - application window likely closed, prioritize recent postings",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles requiring end-to-end HubSpot ownership with on-site requirements outside San Diego",
+      "action": "Score 3 (Skip) - combination of location mismatch and non-preferred CRM platform",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Roles in pharmaceutical, biotechnology, or medical device industries",
+      "action": "Score 3 (Skip) - candidate lacks specialized medical/pharma industry knowledge, deprioritize this vertical",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Inside Sales Operations roles focused on RMA processing, sample requests, and invoice creation",
+      "action": "Score 3 (Skip) - administrative order processing duties, not strategic GTM building",
       "source": "feedback"
     }
   ],
