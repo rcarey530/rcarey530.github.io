@@ -8,14 +8,9 @@
       "news_url": "https://tennr.com/blog",
       "last_funding_date": "2025-06-01",
       "last_funding_amount": "$101M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Trey Holterman",
-      "contact_1_title": "CEO",
-      "contact_1_email": "trey@tennr.com"
+      "last_outreach_date": null
     },
     {
       "company": "Eve",
@@ -24,14 +19,9 @@
       "news_url": "https://eve.legal/blog",
       "last_funding_date": "2025-09-01",
       "last_funding_amount": "$103M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Jay Madheswaran",
-      "contact_1_title": "CEO",
-      "contact_1_email": "jay@eve.legal"
+      "last_outreach_date": null
     },
     {
       "company": "Supio",
@@ -40,14 +30,9 @@
       "news_url": "https://supio.com/blog",
       "last_funding_date": "2025-05-01",
       "last_funding_amount": "$60M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Jerry Zhou",
-      "contact_1_title": "CEO",
-      "contact_1_email": "jerry@supio.com"
+      "last_outreach_date": null
     },
     {
       "company": "Unify",
@@ -56,14 +41,9 @@
       "news_url": "https://unifygtm.com/blog",
       "last_funding_date": "2025-05-01",
       "last_funding_amount": "$40M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Austin Hughes",
-      "contact_1_title": "CEO",
-      "contact_1_email": "austin@unifygtm.com"
+      "last_outreach_date": null
     },
     {
       "company": "Pylon",
@@ -72,14 +52,9 @@
       "news_url": "https://usepylon.com/blog",
       "last_funding_date": "2025-08-01",
       "last_funding_amount": "$31M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Marty Kausas",
-      "contact_1_title": "CEO",
-      "contact_1_email": "marty@usepylon.com"
+      "last_outreach_date": null
     },
     {
       "company": "Rilla",
@@ -88,14 +63,9 @@
       "news_url": "https://rilla.com/blog",
       "last_funding_date": "2025-06-01",
       "last_funding_amount": "$25M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Sebastian Jimenez",
-      "contact_1_title": "CEO",
-      "contact_1_email": "sebastian@rillavoice.com"
+      "last_outreach_date": null
     },
     {
       "company": "Maven AGI",
@@ -104,14 +74,9 @@
       "news_url": "https://mavenagi.com/blog",
       "last_funding_date": "2025-06-01",
       "last_funding_amount": "$50M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Jonathan Corbin",
-      "contact_1_title": "CEO",
-      "contact_1_email": "jonathan@mavenagi.com"
+      "last_outreach_date": null
     },
     {
       "company": "Sardine",
@@ -120,14 +85,9 @@
       "news_url": "https://sardine.ai/blog",
       "last_funding_date": "2025-02-01",
       "last_funding_amount": "$70M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Soups Ranjan",
-      "contact_1_title": "CEO",
-      "contact_1_email": "soups@sardine.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Adaptive Security",
@@ -136,14 +96,9 @@
       "news_url": "https://adaptivesecurity.com/blog",
       "last_funding_date": "2025-12-01",
       "last_funding_amount": "$81M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Brian Long",
-      "contact_1_title": "CEO",
-      "contact_1_email": "brian@adaptivesecurity.com"
+      "last_outreach_date": null
     },
     {
       "company": "Letter AI",
@@ -152,14 +107,9 @@
       "news_url": "https://letter.ai/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$40M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Ali Akhtar",
-      "contact_1_title": "CEO",
-      "contact_1_email": "ali@letter.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Jump",
@@ -168,14 +118,9 @@
       "news_url": "https://jump.ai/blog",
       "last_funding_date": "2026-02-01",
       "last_funding_amount": "$80M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Parker Ence",
-      "contact_1_title": "Co-founder and CEO",
-      "contact_1_email": "parker@jumpapp.com"
+      "last_outreach_date": null
     },
     {
       "company": "Actively.ai",
@@ -184,14 +129,9 @@
       "news_url": "https://actively.ai/blog",
       "last_funding_date": "2026-01-01",
       "last_funding_amount": "$45M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Mihir Garimella",
-      "contact_1_title": "CEO",
-      "contact_1_email": "mihir@actively.ai"
+      "last_outreach_date": null
     },
     {
       "company": "GC AI",
@@ -200,14 +140,9 @@
       "news_url": "https://gc.ai/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$60M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Cecilia Ziniti",
-      "contact_1_title": "CEO",
-      "contact_1_email": "cecilia@getgc.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Onshore",
@@ -216,14 +151,9 @@
       "news_url": "https://onshore.com/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$31M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Neil O'Donovan",
-      "contact_1_title": "CEO",
-      "contact_1_email": "neil@onshore.com"
+      "last_outreach_date": null
     },
     {
       "company": "Slang AI",
@@ -232,14 +162,9 @@
       "news_url": "https://slang.ai/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$36M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Alex Sambvani",
-      "contact_1_title": "CEO",
-      "contact_1_email": "alex@slang.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Code Metal",
@@ -248,14 +173,9 @@
       "news_url": "https://codemetal.ai/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$125M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Peter Morales",
-      "contact_1_title": "CEO",
-      "contact_1_email": "peter@codemetal.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Oasis Security",
@@ -264,14 +184,9 @@
       "news_url": "https://oasis.security/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$120M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Danny Brickman",
-      "contact_1_title": "CEO",
-      "contact_1_email": "danny@oasis.security"
+      "last_outreach_date": null
     },
     {
       "company": "Noma Security",
@@ -280,14 +195,9 @@
       "news_url": "https://noma.security/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$100M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Niv Braun",
-      "contact_1_title": "CEO",
-      "contact_1_email": "niv@nomasec.com"
+      "last_outreach_date": null
     },
     {
       "company": "Zama",
@@ -296,14 +206,9 @@
       "news_url": "https://zama.ai/blog",
       "last_funding_date": "2025-06-01",
       "last_funding_amount": "$57M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Rand Hindi",
-      "contact_1_title": "CEO",
-      "contact_1_email": "rh@zama.org"
+      "last_outreach_date": null
     },
     {
       "company": "Regie.ai",
@@ -312,14 +217,9 @@
       "news_url": "https://regie.ai/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$10M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Srinath Sridhar",
-      "contact_1_title": "CEO",
-      "contact_1_email": "srinath@regie.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Default",
@@ -328,14 +228,9 @@
       "news_url": "https://default.com/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$22M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Nico Ferreyra",
-      "contact_1_title": "Co-founder and CEO",
-      "contact_1_email": "nico@default.com"
+      "last_outreach_date": null
     },
     {
       "company": "Aviso AI",
@@ -344,14 +239,9 @@
       "news_url": "https://aviso.com/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$15M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Trevor Rodrigues-Templar",
-      "contact_1_title": "CEO",
-      "contact_1_email": "trevor@aviso.com"
+      "last_outreach_date": null
     },
     {
       "company": "Momentum",
@@ -360,14 +250,9 @@
       "news_url": "https://momentum.io/blog",
       "last_funding_date": "2025-01-01",
       "last_funding_amount": "$20M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Jeanette Marais",
-      "contact_1_title": "CEO",
-      "contact_1_email": "jeanette@momentum.io"
+      "last_outreach_date": null
     },
     {
       "company": "Nooks",
@@ -376,14 +261,9 @@
       "news_url": "https://nooks.ai/blog",
       "last_funding_date": "2024-10-01",
       "last_funding_amount": "$43M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Dan Lee",
-      "contact_1_title": "CEO",
-      "contact_1_email": "dan.lee@nooks.ai"
+      "last_outreach_date": null
     },
     {
       "company": "Cortex",
@@ -392,14 +272,9 @@
       "news_url": "https://cortex.io/blog",
       "last_funding_date": "2024-09-01",
       "last_funding_amount": "$60M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Anish Dhar",
-      "contact_1_title": "Co-founder and CEO",
-      "contact_1_email": "anish@cortex.io"
+      "last_outreach_date": null
     },
     {
       "company": "Common Room",
@@ -408,14 +283,9 @@
       "news_url": "https://commonroom.io/blog",
       "last_funding_date": "2022-01-01",
       "last_funding_amount": "$50M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Linda Lian",
-      "contact_1_title": "CEO",
-      "contact_1_email": "linda@commonroom.io"
+      "last_outreach_date": null
     },
     {
       "company": "Tropic",
@@ -424,14 +294,9 @@
       "news_url": "https://tropicapp.io/blog",
       "last_funding_date": "2022-01-01",
       "last_funding_amount": "$65M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "David Campbell",
-      "contact_1_title": "CEO",
-      "contact_1_email": "david@tropicapp.io"
+      "last_outreach_date": null
     },
     {
       "company": "UserGems",
@@ -440,14 +305,9 @@
       "news_url": "https://usergems.com/blog",
       "last_funding_date": "2021-01-01",
       "last_funding_amount": "$20M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Christian Kletzl",
-      "contact_1_title": "CEO",
-      "contact_1_email": "christian.kletzl@usergems.com"
+      "last_outreach_date": null
     },
     {
       "company": "Tofu",
@@ -456,14 +316,9 @@
       "news_url": "https://tofuhq.com/blog",
       "last_funding_date": "2025-02-01",
       "last_funding_amount": "$17M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Eunjoon (EJ) Cho",
-      "contact_1_title": "Co-founder and CEO",
-      "contact_1_email": "ej@tofuhq.com"
+      "last_outreach_date": null
     },
     {
       "company": "Truv",
@@ -472,14 +327,9 @@
       "news_url": "https://truv.com/blog",
       "last_funding_date": "2022-03-01",
       "last_funding_amount": "$25M",
-      "last_known_jobs": [],
-      "last_known_sales_job_count": 0,
       "last_signal": null,
       "last_signal_date": null,
-      "last_outreach_date": null,
-      "contact_1_name": "Kirill Klokov",
-      "contact_1_title": "Co-founder and CEO",
-      "contact_1_email": "kirill@truv.com"
+      "last_outreach_date": null
     }
   ]
 }
