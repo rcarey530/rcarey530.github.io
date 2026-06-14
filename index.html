@@ -1147,22 +1147,27 @@
 <div class="page" id="projects">
   <div class="page-label">Projects / GTM Engineering</div>
   <h1 class="page-title">Projects</h1>
-  <p class="page-desc">A running log of GTM engineering builds, workflows, and experiments. Each project is a real system built for a real problem.</p>
+  <p class="page-desc">A running log of GTM engineering builds. Each project is a real system built that is actively published.</p>
 
  <div class="project-card" onclick="toggleGoldenList()" style="cursor: pointer;">
     <span class="project-status">Live</span>
-    <h3>Weekly GTM Job Search List ↓</h3>
+    <h3>Project #1 Weekly GTM Job Search List ↓</h3>
     <p>Every Wednesday a Clay workflow automatically sources job opportunities matching my GTM Engineer ICP, enriches each one with company data and funding signals, scores them against my criteria, and publishes the results here. This is the same system I would build for a sales team applied to my own job search.</p>
   </div>
 <div class="project-card" style="cursor: pointer; margin-top: 16px;" onclick="window.open('https://gtm-analytics-production.up.railway.app', '_blank')">
   <span class="project-status">Live</span>
-  <h3>GTM Analytics Query Interface ↗</h3>
+  <h3>Project #2 GTM Analytics Query Interface ↗</h3>
   <p>A Snowflake-style SQL query interface built on top of the job search pipeline data. Pulls live job history from Google Sheets into a SQLite database on startup and lets you run any SQL query against it. Built with TypeScript, Express, and sql.js, deployed on Railway. Demonstrates backend engineering, database querying, and production deployment as part of the broader GTM job search automation system.</p>
 </div>
 <div class="project-card" style="cursor: pointer; margin-top: 16px;" onclick="showPage('project3')">
   <span class="project-status">Live</span>
-  <h3>Signal to Sequence Agent - AQL's →</h3>
+  <h3>Project #3 Signal to Sequence Agent - AQL's →</h3>
   <p>An automated outbound system that monitors a book of 30 funded B2B SaaS companies for buying signals, then finds the right contact, writes a personalized opening line, and queues them in a sequence waiting on a manual first touch. Runs every two weeks on n8n using Firecrawl, Claude, Hunter, and Apollo. The same signal-based outbound motion a GTM Engineer would build for a sales team, applied to my own job search.</p>
+</div>
+ <div class="project-card" style="cursor: pointer; margin-top: 16px;" onclick="window.open('https://miro.com/app/board/uXjVHRxgTBs=/?share_link_id=590319867566', '_blank')">
+  <span class="project-status">Live</span>
+  <h3>System Architecture Diagrams ↗</h3>
+  <p>Miro board documenting the end to end architecture for all three projects shown above. Each project is mapped as a staged flow diagram showing how data moves between tools and where automation hands off to human review.</p>
 </div>
   <div id="golden-list-container" style="margin-top: 32px; display: none;">
     <div style="font-size: 11px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">
