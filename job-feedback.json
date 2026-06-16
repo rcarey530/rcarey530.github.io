@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09T15:01:03.618Z",
+  "lastUpdated": "2026-06-16T15:00:50.469Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -135,6 +135,11 @@
     {
       "pattern": "Inside Sales Operations roles focused on RMA processing, sample requests, and invoice creation",
       "action": "Score 3 (Skip) - administrative order processing duties, not strategic GTM building",
+      "source": "feedback"
+    },
+    {
+      "pattern": "GTM Engineer roles at well-aligned companies located outside San Diego but remote-friendly",
+      "action": "Score 1 (Apply) - strong role fit outweighs non-San Diego location when remote work is available",
       "source": "feedback"
     }
   ],
