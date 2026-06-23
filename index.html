@@ -499,6 +499,24 @@
     background: #c9a84c;
     color: #0e0e0e;
   }
+
+  .video-series-btn {
+    font-size: 11px;
+    color: #c9a84c;
+    background: none;
+    border: 1px solid #c9a84c;
+    padding: 8px 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .video-series-btn:hover {
+    background: #c9a84c;
+    color: #0e0e0e;
+  }
 </style>
 </head>
 <body>
@@ -512,6 +530,7 @@
       GTM Engineer - Ryan Carey <span class="arrow">▾</span>
     </button>
     <div class="nav-dropdown-menu">
+      <a onclick="showPage('videoseries')">GTM Video Series</a>
       <a onclick="showPage('mindset')">GTM Philosophy</a>
       <a onclick="showPage('ninety')">First 90 Days</a>
       <a onclick="showPage('rhythm')">Operating Rhythm</a>
@@ -537,6 +556,9 @@
         allow="autoplay"
         allowfullscreen>
       </iframe>
+    </div>
+    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+      <button class="video-series-btn" onclick="showPage('videoseries')">GTM Video Series →</button>
     </div>
   </div>
 </div>
@@ -1024,6 +1046,117 @@
   </div>
 </div>
 
+<!-- GTM VIDEO SERIES PAGE -->
+<div class="page" id="videoseries">
+  <div class="page-label">GTM Engineering / Video Series</div>
+  <h1 class="page-title">GTM Video Series</h1>
+  <p class="page-desc">A short series breaking down what GTM engineering is, why it matters, and how I build the systems that make revenue teams more effective.</p>
+
+  <div class="philosophy-section">
+    <h2>What is GTM Engineering</h2>
+    <div style="width: 100%; max-width: 800px;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/PASTE_FILE_ID_HERE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>Why Every Revenue Team Needs a GTM Engineer</h2>
+    <div style="width: 100%; max-width: 800px;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/PASTE_FILE_ID_HERE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>My GTM Philosophy</h2>
+    <div style="width: 100%; max-width: 800px;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/PASTE_FILE_ID_HERE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>The Golden List</h2>
+    <div style="width: 100%; max-width: 800px;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/PASTE_FILE_ID_HERE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="philosophy-section">
+    <h2>Current State vs Future State of GTM</h2>
+    <div style="width: 100%; max-width: 800px;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/PASTE_FILE_ID_HERE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CURRENT WORK PAGE -->
+<div class="page" id="currentwork">
+  <div class="page-label">Current Work / 2024 - 2026</div>
+  <h1 class="page-title">Free Thinkers Consulting</h1>
+  <p class="page-desc">Built the full GTM infrastructure for a Salesforce implementation partner from zero. No outbound system, no list building process, no CRM hygiene, and no partner motion existed before this engagement.</p>
+
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-num">$250K</div>
+      <div class="stat-label">Closed ARR</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$700K</div>
+      <div class="stat-label">Active Pipeline</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">836</div>
+      <div class="stat-label">AEs Contacted</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">70%</div>
+      <div class="stat-label">Meeting Rate</div>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2>The Problem</h2>
+    <p>The company ran entirely on referrals. There was no repeatable process for generating new pipeline, no defined ICP, no sequencing tool, and no structured CRM. Every deal came from personal relationships, which meant revenue was unpredictable and not scalable.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>The Stack</h2>
+    <p>Apollo for list building and persona management. Clay for enrichment and signal detection. Salesforce rebuilt from scratch for pipeline management. Reply.io for multi-touch sequencing across email and LinkedIn.</p>
+    <div class="tag-row">
+      <span class="tag">Apollo.io</span>
+      <span class="tag">Clay</span>
+      <span class="tag">Salesforce</span>
+      <span class="tag">Reply.io</span>
+      <span class="tag">LinkedIn Sales Navigator</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2>The Motion</h2>
+    <p>Built a Salesforce AE co-sell channel targeting AEs by territory and vertical. Outreach was peer-to-peer in tone, led with value to the AE, and supported with account plans covering growth signals, tech stack, and outreach angles for their target accounts.</p>
+    <p>Five sequences launched across 836 Salesforce AEs. Best performing sequence hit a 45% open rate targeting the FINS and Financial Services Cloud vertical. 70% of replies converted to booked meetings.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>The Results</h2>
+    <p>$250K in closed ARR from managed services contracts sourced entirely through the AE co-sell channel. Six active opportunities totaling $700K in pipeline. Zero of this revenue existed before the motion was built.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2>The Network</h2>
+    <p>Built active co-sell relationships with Salesforce AEs across San Diego and the Bay Area. Sourced and onboarded a Revenue Cloud Advanced delivery partner for white-label overflow. Currently building a Clay-based fractional leader outreach workflow to identify executives starting new engagements at Salesforce accounts.</p>
+  </div>
+</div>
+
 <!-- PROJECT 3 PAGE -->
 <div class="page" id="project3">
   <div class="page-label">Projects / Signal to Sequence Agent</div>
@@ -1091,65 +1224,6 @@
     <h2>Stage 4: Apollo Enrollment (Manual First Touch)</h2>
     <p>When a contact has a verified email and a personalized first line, the final step is getting them into the outreach sequence without losing control of what actually gets sent. Fully automated sending is the wrong move for a signal based sequence, human judgement is neccessary. The Apollo Enrollment stage solves that by automating everything up to the send and then stopping for a manual review before any email leaves the inbox.</p>
     <p>An Apollo Create Contact node creates the contact in Apollo using the name, email, title, and company fields flowing in from the previous stage. The generated first line is written to a custom field called First Line using the field ID stored in the Apollo account. Apollo returns a contact ID confirming the record was created successfully. An Apollo Enroll node takes that contact ID and adds the contact to the Signal Sequence. The sequence is configured with a manual email as Step 1, which means the contact sits in the queue but nothing sends until the email is reviewed and approved. The email template opens with a First Line variable that pulls the generated sentence directly into the draft so the personalization is already there when the review happens. Every contact that completes this stage is sitting in Apollo with a verified email, a personalized first line in their record, and a draft email ready to review.</p>
-  </div>
-</div>
-
-<!-- CURRENT WORK PAGE -->
-<div class="page" id="currentwork">
-  <div class="page-label">Current Work / 2024 - 2026</div>
-  <h1 class="page-title">Free Thinkers Consulting</h1>
-  <p class="page-desc">Built the full GTM infrastructure for a Salesforce implementation partner from zero. No outbound system, no list building process, no CRM hygiene, and no partner motion existed before this engagement.</p>
-
-  <div class="stats-row">
-    <div class="stat">
-      <div class="stat-num">$250K</div>
-      <div class="stat-label">Closed ARR</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">$700K</div>
-      <div class="stat-label">Active Pipeline</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">836</div>
-      <div class="stat-label">AEs Contacted</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">70%</div>
-      <div class="stat-label">Meeting Rate</div>
-    </div>
-  </div>
-
-  <div class="cs-section">
-    <h2>The Problem</h2>
-    <p>The company ran entirely on referrals. There was no repeatable process for generating new pipeline, no defined ICP, no sequencing tool, and no structured CRM. Every deal came from personal relationships, which meant revenue was unpredictable and not scalable.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>The Stack</h2>
-    <p>Apollo for list building and persona management. Clay for enrichment and signal detection. Salesforce rebuilt from scratch for pipeline management. Reply.io for multi-touch sequencing across email and LinkedIn.</p>
-    <div class="tag-row">
-      <span class="tag">Apollo.io</span>
-      <span class="tag">Clay</span>
-      <span class="tag">Salesforce</span>
-      <span class="tag">Reply.io</span>
-      <span class="tag">LinkedIn Sales Navigator</span>
-    </div>
-  </div>
-
-  <div class="cs-section">
-    <h2>The Motion</h2>
-    <p>Built a Salesforce AE co-sell channel targeting AEs by territory and vertical. Outreach was peer-to-peer in tone, led with value to the AE, and supported with account plans covering growth signals, tech stack, and outreach angles for their target accounts.</p>
-    <p>Five sequences launched across 836 Salesforce AEs. Best performing sequence hit a 45% open rate targeting the FINS and Financial Services Cloud vertical. 70% of replies converted to booked meetings.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>The Results</h2>
-    <p>$250K in closed ARR from managed services contracts sourced entirely through the AE co-sell channel. Six active opportunities totaling $700K in pipeline. Zero of this revenue existed before the motion was built.</p>
-  </div>
-
-  <div class="cs-section">
-    <h2>The Network</h2>
-    <p>Built active co-sell relationships with Salesforce AEs across San Diego and the Bay Area. Sourced and onboarded a Revenue Cloud Advanced delivery partner for white-label overflow. Currently building a Clay-based fractional leader outreach workflow to identify executives starting new engagements at Salesforce accounts.</p>
   </div>
 </div>
 
