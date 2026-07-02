@@ -330,6 +330,43 @@
     border: none;
   }
 
+  .video-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0a0a0a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s;
+  }
+
+  .video-poster:hover { opacity: 0.92; }
+
+  .play-btn {
+    width: 54px;
+    height: 54px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .play-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent #fff;
+  }
+
   @media (max-width: 768px) {
     .project-grid { grid-template-columns: 1fr; }
   }
@@ -1276,7 +1313,9 @@
       <h3>Project #1 Weekly GTM Job Search List &#8595;</h3>
       <p>Every Wednesday a Clay workflow automatically sources job opportunities matching my GTM Engineer ICP, enriches each one with company data and funding signals, scores them against my criteria, and publishes the results here. This is the same system I would build for a sales team applied to my own job search.</p>
       <div class="card-video" onclick="event.stopPropagation()">
-        <iframe src="https://drive.google.com/file/d/1qqWj2_k-VLWkXxmc9d2D3E71VlXEpC3s/preview" allow="autoplay" allowfullscreen></iframe>
+        <div class="video-poster" style="background-image: url('project1-thumb.jpg');" onclick="loadVideo(this, '1qqWj2_k-VLWkXxmc9d2D3E71VlXEpC3s')">
+          <div class="play-btn"></div>
+        </div>
       </div>
     </div>
 
@@ -1285,7 +1324,9 @@
       <h3>Project #2 GTM Analytics Query Interface &#8599;</h3>
       <p>A Snowflake-style SQL query interface built on top of the job search pipeline data. Pulls live job history from Google Sheets into a SQLite database on startup and lets you run any SQL query against it. Built with TypeScript, Express, and sql.js, deployed on Railway. Demonstrates backend engineering, database querying, and production deployment as part of the broader GTM job search automation system.</p>
       <div class="card-video" onclick="event.stopPropagation()">
-        <iframe src="https://drive.google.com/file/d/1k8IWyd6ruCKHkZLFPV7oDxKUhqPuYvBi/preview" allow="autoplay" allowfullscreen></iframe>
+        <div class="video-poster" style="background-image: url('project2-thumb.jpg');" onclick="loadVideo(this, '1k8IWyd6ruCKHkZLFPV7oDxKUhqPuYvBi')">
+          <div class="play-btn"></div>
+        </div>
       </div>
     </div>
 
@@ -1294,7 +1335,9 @@
       <h3>Project #3 Signal to Sequence Agent - AQL's &#8594;</h3>
       <p>An automated outbound system that monitors a book of 30 funded B2B SaaS companies for buying signals, then finds the right contact, writes a personalized opening line, and queues them in a sequence waiting on a manual first touch. Runs every two weeks on n8n using Firecrawl, Claude, Hunter, and Apollo. The same signal-based outbound motion a GTM Engineer would build for a sales team, applied to my own job search.</p>
       <div class="card-video" onclick="event.stopPropagation()">
-        <iframe src="https://drive.google.com/file/d/129NH1J1jxYGwE-gDid8u6DYZJkA7Ptkc/preview" allow="autoplay" allowfullscreen></iframe>
+        <div class="video-poster" style="background-image: url('project3-thumb.jpg');" onclick="loadVideo(this, '129NH1J1jxYGwE-gDid8u6DYZJkA7Ptkc')">
+          <div class="play-btn"></div>
+        </div>
       </div>
     </div>
 
@@ -1370,6 +1413,10 @@
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.remove('active'));
     document.getElementById('home').style.display = 'flex';
+  }
+
+  function loadVideo(el, id) {
+    el.outerHTML = '<iframe src="https://drive.google.com/file/d/' + id + '/preview" allow="autoplay" allowfullscreen></iframe>';
   }
 
   function toggleGoldenList() {
