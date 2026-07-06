@@ -21,7 +21,7 @@
     align-items: center;
     height: 48px;
     padding: 0 24px;
-    border-bottom: 1px solid #222;
+    border: 3px solid #c9a84c;
     background: #0e0e0e;
     gap: 24px;
     position: fixed;
@@ -30,7 +30,7 @@
   }
 
   .nav-brand {
-    font-size: 13px;
+    font-size: 19px;
     font-weight: 600;
     color: #c9a84c;
     letter-spacing: 0.02em;
@@ -51,7 +51,7 @@
     border: none;
     color: #888;
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 19px;
     font-weight: 500;
     cursor: pointer;
     padding: 0;
@@ -110,7 +110,7 @@
     border: none;
     color: #888;
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 19px;
     font-weight: 500;
     cursor: pointer;
     padding: 0;
@@ -276,6 +276,53 @@
     padding-bottom: 48px;
     border-bottom: 1px solid #1a1a1a;
   }
+
+  .accordion { margin-top: 24px; }
+
+  .accordion-item {
+    border: 1px solid #1e1e1e;
+    margin-bottom: 12px;
+    transition: border-color 0.15s;
+  }
+
+  .accordion-item:hover { border-color: #2a2a2a; }
+
+  .accordion-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    padding: 22px 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .accordion-header:hover { color: #c9a84c; background: #141414; }
+  .accordion-header.active { color: #c9a84c; }
+
+  .accordion-arrow {
+    font-size: 11px;
+    color: #c9a84c;
+    transition: transform 0.2s;
+  }
+
+  .accordion-header.active .accordion-arrow { transform: rotate(180deg); }
+
+  .accordion-body {
+    display: none;
+    padding: 8px 24px 8px 24px;
+    border-top: 1px solid #1e1e1e;
+  }
+
+  .accordion-body.open { display: block; }
 
   .tag-row {
     display: flex;
@@ -593,27 +640,23 @@
 <body>
 
 <nav>
-  <div class="nav-brand" onclick="showHome()" style="cursor: pointer;">Ryan Carey / GTM Engineer</div>
+  <div class="nav-brand" onclick="showHome()" style="cursor: pointer;">Home</div>
   <div class="nav-divider"></div>
 
   <button class="nav-link" onclick="showPage('projects')">Projects</button>
 
   <div class="nav-divider"></div>
-  <button class="nav-link" onclick="showPage('currentwork')">Current Work</button>
+  <button class="nav-link" onclick="showPage('currentwork')">Current GTM Role</button>
 
   <div class="nav-divider"></div>
   <div class="nav-dropdown">
     <button class="nav-dropdown-toggle">
-      My Philosophy <span class="arrow">&#9662;</span>
+      About <span class="arrow">&#9662;</span>
     </button>
     <div class="nav-dropdown-menu">
       <a onclick="showPage('videoseries')">My GTM Philosophy</a>
-      <a onclick="showPage('mindset')">Background</a>
-      <a onclick="showPage('ninety')">First 90 Days</a>
-      <a onclick="showPage('rhythm')">Operating Rhythm</a>
-      <a onclick="showPage('orgstructure')">Ideal Org Structure</a>
-      <a onclick="showPage('techstack')">The Tech Stack</a>
-      <a onclick="showPage('goldenlist')">The Golden List</a>
+      <a onclick="showPage('mindset')">My Background</a>
+      <a onclick="showPage('workflow')">My Workflow</a>
     </div>
   </div>
 </nav>
@@ -631,7 +674,7 @@
       </iframe>
     </div>
     <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-      <button class="video-series-btn" onclick="showPage('projects')">Projects &#8594;</button>
+      <button class="video-series-btn" onclick="showPage('projects')" style="background: #c9a84c; color: #0e0e0e;">Projects &#8594;</button>
     </div>
   </div>
 </div>
@@ -723,10 +766,17 @@
   </div>
 </div>
 
-<!-- FIRST 90 DAYS PAGE -->
-<div class="page" id="ninety">
-  <div class="page-label">GTM Engineering / First 90 Days</div>
-  <h1 class="page-title">The First 90 Days</h1>
+<!-- MY WORKFLOW PAGE -->
+<div class="page" id="workflow">
+  <div class="page-label">GTM Engineering / My Workflow</div>
+  <h1 class="page-title">My Workflow</h1>
+  <p class="page-desc">How I operate inside a company, from the first ninety days through the systems and infrastructure I build once I am in the seat, laid out as sections you can open one at a time.</p>
+
+  <div class="accordion">
+
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleAccordion(this)">First 90 Days <span class="accordion-arrow">&#9662;</span></button>
+    <div class="accordion-body">
 
   <div class="philosophy-opener">
     Most GTM engineers walk into a new company and immediately start touching tools. They audit the tech stack, they look at sequences, they start building before they understand what they are actually building for. That is the wrong order of operations. The first month is not about building anything. It is about understanding everything.
@@ -761,12 +811,12 @@
     <p>None of this is finished at day 90. The work is never finished. But the mindset has shifted, the momentum is building, and the urgency to keep improving is now embedded in how the team operates every day. That is the real deliverable. Not a completed system but an organization that now knows what good looks like and is moving toward it with intention.</p>
     <p>And that momentum does not stay contained to one function. Once the infrastructure is in place and the data is clean, every part of the business that touches the customer starts to operate differently. Marketing, customer success, product. The same foundation that fixes the sales motion ends up being the thing the entire organization builds on top of.</p>
   </div>
-</div>
+    </div>
+  </div>
 
-<!-- OPERATING RHYTHM PAGE -->
-<div class="page" id="rhythm">
-  <div class="page-label">GTM Engineering / Operating Rhythm</div>
-  <h1 class="page-title">Operating Rhythm</h1>
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleAccordion(this)">Operating Rhythm <span class="accordion-arrow">&#9662;</span></button>
+    <div class="accordion-body">
   <div class="philosophy-opener">
     The way I operate is built around one principle. Objectives first, everything else second. Before any work gets prioritized, leadership and I align on the quarterly objectives and key results for the business. Every request that comes in gets measured against those objectives. Work that directly serves the current quarter's goals moves to the front of the queue. Work that falls outside of those priorities gets documented and triaged accordingly. There are no favorites, no squeaky wheel getting the grease, no one team getting priority over another because they asked louder. The business objectives are the filter and everything gets evaluated through that lens.
   </div>
@@ -790,12 +840,12 @@
     <h2>How I Measure Whether the Work Is Being Used</h2>
     <p>Building something and shipping it is only half the job. The other half is knowing whether anyone is actually using it. Most ops teams skip this part entirely and end up with a graveyard of tools that nobody touches. I watch behavior. If a follow up email gets drafted automatically by the system and the rep never sends it that is a signal the workflow is not landing the way it should. If sequence reply rates go up after a new campaign launches that is a signal the targeting or messaging improvement worked. If reps are still manually updating fields that the system should be updating for them that is a signal the automation is broken or was never adopted. CRM activity, sequence engagement, output utilization, and rep behavior are all data points that tell the real story of whether the system is working. The goal is not just that the tool exists. The goal is that the team operates differently because of it.</p>
   </div>
-</div>
+    </div>
+  </div>
 
-<!-- IDEAL ORG STRUCTURE PAGE -->
-<div class="page" id="orgstructure">
-  <div class="page-label">GTM Engineering / Ideal Org Structure</div>
-  <h1 class="page-title">Ideal Org Structure</h1>
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleAccordion(this)">Ideal Org Structure <span class="accordion-arrow">&#9662;</span></button>
+    <div class="accordion-body">
   <div class="philosophy-opener">
     Where the GTM engineer sits in an organization determines almost everything about whether the function actually works. Put them in the wrong place and the best work in the world gets deprioritized, ignored, or buried under a reporting structure that was never designed to support this kind of function. Get it right and the GTM engineer becomes one of the most leveraged people in the entire revenue organization.
   </div>
@@ -826,12 +876,12 @@
     <p>When the GTM engineer reports to the wrong person the work gets disconnected from the people it is supposed to serve. If they report too far into a technical or finance adjacent structure they end up solving data problems that nobody in sales asked for. If they report to someone without visibility into the go to market strategy they end up building tactically without understanding where the business is heading. In either case the output becomes something that looks productive on paper but does not actually change how the sales team operates.</p>
     <p>The reporting structure is not an administrative detail. It is what determines whether the GTM engineer has the access, the context, and the trust to do the work that actually matters.</p>
   </div>
-</div>
+    </div>
+  </div>
 
-<!-- TECH STACK PAGE -->
-<div class="page" id="techstack">
-  <div class="page-label">GTM Engineering / The Tech Stack</div>
-  <h1 class="page-title">The Tech Stack</h1>
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleAccordion(this)">The Tech Stack <span class="accordion-arrow">&#9662;</span></button>
+    <div class="accordion-body">
   <div class="philosophy-opener">
     The tools in this stack were not chosen because they are the most popular or the most expensive. They were chosen because each one does a specific job well and passes clean data to everything else. The stack is not fixed and I am open to working with whatever tools best fit the problem.
   </div>
@@ -1086,12 +1136,12 @@
       </div>
     </div>
   </div>
-</div>
+    </div>
+  </div>
 
-<!-- GOLDEN LIST PAGE -->
-<div class="page" id="goldenlist">
-  <div class="page-label">GTM Engineering / The Golden List</div>
-  <h1 class="page-title">The Golden List</h1>
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleAccordion(this)">The Golden List <span class="accordion-arrow">&#9662;</span></button>
+    <div class="accordion-body">
 
   <div class="philosophy-opener">
     Most companies think they have a target account list. What they actually have is a CRM full of contacts nobody trusts, a territory carve that was done on bad data six months ago, and a prospecting process that starts from scratch every time a rep needs to build pipeline. That is not a golden list and the absence of one is the root cause of most pipeline problems companies face when trying to scale.
@@ -1117,6 +1167,9 @@
     <p>It starts with defining the ICP with enough precision that there is no margin for error. Not a rough sketch of who the product is for but a documented definition of exactly who buys, why they buy, what signals indicate they are ready, and what disqualifies an account before time gets wasted on it. From there a large universe of accounts gets pulled and layered with intent signals, job change data, firmographic fit, and technographic indicators. Accounts get scored and tiered. Contacts get graded. The output is a list the sales team can act on immediately with confidence that they are spending their time on the right people. The list then gets maintained on an ongoing basis so it compounds in value over time rather than decaying like every static list eventually does.</p>
     <p>The golden list is not a deliverable. It is the infrastructure that makes every other part of the go to market motion work and it is the first thing I build at any new company.</p>
   </div>
+    </div>
+  </div>
+  </div>
 </div>
 
 <!-- GTM VIDEO SERIES PAGE -->
@@ -1130,15 +1183,6 @@
     <div style="width: 100%; max-width: 800px;">
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
         <iframe src="https://drive.google.com/file/d/1vYjn1XWsEHblvyPqd7QgwJfA1xPHRXNF/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>Why Every Revenue Team Needs a GTM Engineer</h2>
-    <div style="width: 100%; max-width: 800px;">
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-        <iframe src="https://drive.google.com/file/d/187kQek77pv67NlqY8H1OFLSj7RmhieGz/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -1306,6 +1350,12 @@
   <h1 class="page-title">Projects</h1>
   <p class="page-desc">A running log of GTM engineering builds. Each project is a real system built that is actively published.</p>
 
+  <div class="project-card" onclick="showPage('currentwork')" style="cursor: pointer; margin-bottom: 24px;">
+    <span class="project-status">Current Role</span>
+    <h3>Current GTM Role &#8594;</h3>
+    <img src="ftc-logo.jpg" alt="Free Thinkers Consulting" style="width: 100%; display: block; margin-top: 16px; border: 1px solid #1e1e1e;">
+  </div>
+
  <div style="display: flex; align-items: center; gap: 24px;">
   <div class="project-grid" style="flex: 1;">
 
@@ -1342,6 +1392,7 @@
     <div class="project-card" style="cursor: pointer;" onclick="window.open('https://miro.com/app/board/uXjVHRxgTBs=/?share_link_id=590319867566', '_blank')">
       <span class="project-status">Live</span>
       <h3>System Architecture Diagrams &#8599;</h3>
+      <img src="miro-board.jpg" alt="System architecture Miro board" style="width: 100%; display: block; margin-top: 20px; border: 1px solid #1e1e1e;">
     </div>
 
   </div>
@@ -1416,6 +1467,18 @@
 
   function loadVideo(el, id) {
     el.outerHTML = '<iframe src="https://drive.google.com/file/d/' + id + '/preview" allow="autoplay" allowfullscreen></iframe>';
+  }
+
+  function toggleAccordion(header) {
+    const body = header.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    if (isOpen) {
+      body.classList.remove('open');
+      header.classList.remove('active');
+    } else {
+      body.classList.add('open');
+      header.classList.add('active');
+    }
   }
 
   function toggleGoldenList() {
