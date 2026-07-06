@@ -1380,12 +1380,6 @@
   <h1 class="page-title">Projects</h1>
   <p class="page-desc">A running log of GTM engineering builds. Each project is a real system built that is actively published.</p>
 
-  <div class="project-card" onclick="showPage('currentwork')" style="cursor: pointer; margin-bottom: 24px;">
-    <span class="project-status">Current Role</span>
-    <h3>Current GTM Role &#8594;</h3>
-    <img src="ftc-logo.jpg" alt="Free Thinkers Consulting" style="width: 100%; display: block; margin-top: 16px; border: 1px solid #1e1e1e;">
-  </div>
-
   <div class="project-grid">
 
     <div class="project-card" onclick="toggleGoldenList()" style="cursor: pointer;">
@@ -1421,7 +1415,9 @@
     <div class="project-card" style="cursor: pointer;" onclick="window.open('https://miro.com/app/board/uXjVHRxgTBs=/?share_link_id=590319867566', '_blank')">
       <span class="project-status">Live</span>
       <h3>System Architecture Diagrams &#8599;</h3>
-      <img src="miro-board.jpg" alt="System architecture Miro board" style="width: 100%; display: block; margin-top: 20px; border: 1px solid #1e1e1e;">
+      <div class="card-video">
+        <img src="miro-board.jpg" alt="System architecture Miro board" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+      </div>
     </div>
 
   </div>
@@ -1475,6 +1471,12 @@
         document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">Unable to load job data.</p>';
       });
   </script>
+
+  <div class="project-card" onclick="showPage('currentwork')" style="cursor: pointer; margin-top: 56px;">
+    <span class="project-status">Current Role</span>
+    <h3>Current GTM Role &#8594;</h3>
+    <img src="ftc-logo.jpg" alt="Free Thinkers Consulting" style="width: 100%; display: block; margin-top: 16px; border: 1px solid #1e1e1e;">
+  </div>
 
   <div style="display: flex; justify-content: center; margin-top: 56px;">
     <button class="video-series-btn gold-cta" onclick="showPage('videoseries')">My GTM Philosophy &#8594;</button>
