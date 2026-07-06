@@ -186,11 +186,12 @@
   .stats-row {
     display: flex;
     border: 1px solid #222;
-    width: fit-content;
-    margin-bottom: 48px;
+    width: 100%;
+    margin-bottom: 56px;
   }
 
   .stat {
+    flex: 1;
     padding: 18px 32px;
     border-right: 1px solid #222;
   }
@@ -213,28 +214,38 @@
   }
 
   .cs-section {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+    padding-bottom: 56px;
     border-bottom: 1px solid #1a1a1a;
   }
 
   .cs-section:last-child { border-bottom: none; }
 
   .cs-section h2 {
-    font-size: 13px;
+    flex: 1;
+    min-width: 280px;
+    font-size: 34px;
     font-weight: 600;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 14px;
+    color: #e8e8e8;
+    text-transform: none;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .cs-body {
+    flex: 1;
+    min-width: 280px;
   }
 
   .cs-section p {
-    color: #777;
-    font-size: 13px;
-    line-height: 1.8;
-    max-width: 1200px;
-    margin-bottom: 14px;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.85;
+    margin: 0 0 14px 0;
   }
 
   .cs-section p:last-of-type { margin-bottom: 0; }
@@ -323,6 +334,16 @@
   }
 
   .accordion-body.open { display: block; }
+
+  .accordion-body > p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 1200px;
+    margin-bottom: 16px;
+  }
+
+  .accordion-body > p:last-child { margin-bottom: 0; }
 
   .tag-row {
     display: flex;
@@ -692,7 +713,7 @@
 </div>
 
 <!-- GTM PHILOSOPHY PAGE -->
-<div class="page" id="mindset">
+<div class="page" id="mindset" style="max-width: none;">
   <div class="page-label">GTM Engineering / The Mindset</div>
   <h1 class="page-title">The GTM Engineer Mindset</h1>
 
@@ -798,7 +819,7 @@
 </div>
 
 <!-- MY WORKFLOW PAGE -->
-<div class="page" id="workflow">
+<div class="page" id="workflow" style="max-width: none;">
   <div class="page-label">GTM Engineering / My Workflow</div>
   <h1 class="page-title">My Workflow</h1>
   <p class="page-desc">How I operate inside a company, from the first ninety days through the systems and infrastructure I build once I am in the seat, laid out as sections you can open one at a time.</p>
@@ -1243,7 +1264,7 @@
 </div>
 
 <!-- CURRENT WORK PAGE -->
-<div class="page" id="currentwork">
+<div class="page" id="currentwork" style="max-width: none;">
   <div class="page-label">Current GTM Role / 2024 - 2026</div>
 
   <div style="display: flex; align-items: center; gap: 56px; margin-bottom: 56px; flex-wrap: wrap;">
@@ -1271,36 +1292,46 @@
   </div>
 
   <div class="cs-section">
-    <h2>The Problem</h2>
-    <p>The company ran entirely on referrals. There was no repeatable process for generating new pipeline, no defined ICP, no sequencing tool, and no structured CRM. Every deal came from personal relationships, which meant revenue was unpredictable and not scalable.</p>
+    <h2>The Objective</h2>
+    <div class="cs-body">
+      <p>The company ran entirely on referrals. There was no repeatable process for generating new pipeline, no defined ICP, no sequencing tool, and no structured CRM. Every deal came from personal relationships, which meant revenue was unpredictable and not scalable.</p>
+    </div>
   </div>
 
   <div class="cs-section">
     <h2>The Stack</h2>
-    <p>Apollo for list building and persona management. Clay for enrichment and signal detection. Salesforce rebuilt from scratch for pipeline management. Reply.io for multi-touch sequencing across email and LinkedIn.</p>
-    <div class="tag-row">
-      <span class="tag">Apollo.io</span>
-      <span class="tag">Clay</span>
-      <span class="tag">Salesforce</span>
-      <span class="tag">Reply.io</span>
-      <span class="tag">LinkedIn Sales Navigator</span>
+    <div class="cs-body">
+      <p>Apollo for list building and persona management. Clay for enrichment and signal detection. Salesforce rebuilt from scratch for pipeline management. Reply.io for multi-touch sequencing across email and LinkedIn.</p>
+      <div class="tag-row">
+        <span class="tag">Apollo.io</span>
+        <span class="tag">Clay</span>
+        <span class="tag">Salesforce</span>
+        <span class="tag">Reply.io</span>
+        <span class="tag">LinkedIn Sales Navigator</span>
+      </div>
     </div>
   </div>
 
   <div class="cs-section">
     <h2>The Motion</h2>
-    <p>Built a Salesforce AE co-sell channel targeting AEs by territory and vertical. Outreach was peer-to-peer in tone, led with value to the AE, and supported with account plans covering growth signals, tech stack, and outreach angles for their target accounts.</p>
-    <p>Five sequences launched across 836 Salesforce AEs. Best performing sequence hit a 45% open rate targeting the FINS and Financial Services Cloud vertical. 70% of replies converted to booked meetings.</p>
+    <div class="cs-body">
+      <p>Built a Salesforce AE co-sell channel targeting AEs by territory and vertical. Outreach was peer-to-peer in tone, led with value to the AE, and supported with account plans covering growth signals, tech stack, and outreach angles for their target accounts.</p>
+      <p>Five sequences launched across 836 Salesforce AEs. Best performing sequence hit a 45% open rate targeting the FINS and Financial Services Cloud vertical. 70% of replies converted to booked meetings.</p>
+    </div>
   </div>
 
   <div class="cs-section">
     <h2>The Results</h2>
-    <p>$250K in closed ARR from managed services contracts sourced entirely through the AE co-sell channel. Six active opportunities totaling $700K in pipeline. Zero of this revenue existed before the motion was built.</p>
+    <div class="cs-body">
+      <p>$250K in closed ARR from managed services contracts sourced entirely through the AE co-sell channel. Six active opportunities totaling $700K in pipeline. Zero of this revenue existed before the motion was built.</p>
+    </div>
   </div>
 
   <div class="cs-section">
     <h2>The Network</h2>
-    <p>Built active co-sell relationships with Salesforce AEs across San Diego and the Bay Area. Sourced and onboarded a Revenue Cloud Advanced delivery partner for white-label overflow. Currently building a Clay-based fractional leader outreach workflow to identify executives starting new engagements at Salesforce accounts.</p>
+    <div class="cs-body">
+      <p>Built active co-sell relationships with Salesforce AEs across San Diego and the Bay Area. Sourced and onboarded a Revenue Cloud Advanced delivery partner for white-label overflow. Currently building a Clay-based fractional leader outreach workflow to identify executives starting new engagements at Salesforce accounts.</p>
+    </div>
   </div>
 </div>
 
