@@ -1335,76 +1335,6 @@
   </div>
 </div>
 
-<!-- PROJECT 3 PAGE -->
-<div class="page" id="project3">
-  <div class="page-label">Projects / Signal to Sequence Agent</div>
-  <h1 class="page-title">Signal to Sequence Agent AQL's </h1>
-
-  <div class="philosophy-opener">
-    An automated outbound system built on top of a curated book of 30 funded B2B SaaS companies. Every two weeks the system scrapes each company's careers page, sends the content to Claude for signal detection, and when a qualifying signal fires it finds the right contact, writes a personalized first line, and enrolls them in an outreach sequence waiting on a manual first touch. This mirrors exactly how a GTM Engineer would build a signal-based outbound motion for a sales team. Monitoring a named account list, triggering outreach at the right moment, and personalizing at scale without adding headcount.
-  </div>
-
-  <div class="philosophy-section">
-    <h2>The System</h2>
-    <p>Every two weeks a scheduled n8n workflow processes all 30 companies in the book of business. Firecrawl scrapes each careers page and returns the content as markdown. Claude evaluates the content against two signal types and returns a structured JSON decision. When a signal is detected a second Claude call decides which department and seniority level to target based on what the signal means. Hunter finds verified contacts at that company matching those criteria. A third Claude call writes a personalized opening sentence referencing the specific signal and the contact's role. Apollo creates the contact with the first line saved to a custom field and enrolls them in the Signal Sequence where Step 1 is a manual email that does not send until approved.</p>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>The Tech Stack</h2>
-    <div class="stack-grid">
-      <div class="stack-item">
-        <div class="stack-item-title">n8n</div>
-        <div class="stack-item-desc">13-node workflow running on a bi-weekly schedule that handles scraping, signal detection, contact discovery, personalization, and CRM enrollment end to end.</div>
-      </div>
-      <div class="stack-item">
-        <div class="stack-item-title">Firecrawl</div>
-        <div class="stack-item-desc">Scrapes careers pages for all 30 companies and returns structured markdown content for Claude to evaluate.</div>
-      </div>
-      <div class="stack-item">
-        <div class="stack-item-title">Claude Sonnet</div>
-        <div class="stack-item-desc">Three separate API calls handling signal detection, contact targeting decisions, and personalized first line generation.</div>
-      </div>
-      <div class="stack-item">
-        <div class="stack-item-title">Hunter.io</div>
-        <div class="stack-item-desc">Contact discovery API that finds verified emails at target company domains filtered by department and seniority.</div>
-      </div>
-      <div class="stack-item">
-        <div class="stack-item-title">Apollo</div>
-        <div class="stack-item-desc">CRM and sequence platform that stores contacts with generated first lines in a custom field and manages the outreach sequence with a manual first touch gate.</div>
-      </div>
-      <div class="stack-item">
-        <div class="stack-item-title">GitHub</div>
-        <div class="stack-item-desc">Stores book-of-business.json as the persistent data layer containing all 30 companies and their signal tracking fields.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>Stage 1: Signal Detection (Every Two Weeks)</h2>
-    <p>When building a signal-based outbound system, the first problem to solve is monitoring. A book of 30 target companies changes constantly. New roles get posted, sales teams start expanding. Without an automated detection layer, catching these moments requires checking manually every week. The Signal Detection stage solves that by turning a static BoB into a live monitoring system that surfaces buying signals automatically.</p>
-    <p>The workflow runs every two weeks on a scheduled trigger. It is the first leg of a 13-node chain built in n8n that handles the full scrape-evaluate-route cycle without any manual input.</p>
-    <p>The workflow fetches book-of-business.json from GitHub, a file containing 30 funded B2B SaaS companies with their careers page URLs and signal tracking fields. A Parse Book of Business code node splits the JSON array into 30 individual items so each company is processed independently. For each company Firecrawl scrapes the careers page URL and returns the full page content as cleaned markdown. A Prepare Signal Content code node strips unnecessary whitespace and builds a structured Claude API request body using JSON. Claude Sonnet evaluates the content against two signals: a GTM or RevOps role posted, or a sales hiring surge with multiple open sales roles. Claude returns a structured JSON object with signal_detected, signal_type, and signal_summary. An IF node routes companies where signal_detected is true to the outreach chain and silently skips the rest.</p>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>Stage 2: Contact Targeting (Claude + Hunter.io)</h2>
-    <p>When a signal fires at a company, the next problem to solve is who to reach out to. Not every signal points to the same person. A GTM role posting means budget is approved and the VP Sales or CRO owns the hire. A sales hiring surge means the VP Sales is building out a team that will need GTM infrastructure to run on. Sending the same outreach to the same contact regardless of what triggered it is the wrong move. The Contact Targeting stage solves that by using Claude to interpret the signal and Hunter to find the right person based on what the signal actually means.</p>
-    <p>A Prepare Claude Title Request code node takes the signal_type and signal_summary from the previous stage and builds a Claude API request asking which department and seniority level to target given what was detected. Claude returns a structured JSON object with a department value and a seniority value drawn from a defined set of options so the output is always clean and usable downstream. A Parse Title Decision code node extracts those values and passes them forward alongside the company and signal fields. Hunter receives the company domain, the department, and the seniority level and searches its database for verified contacts matching those criteria. The search returns up to three contacts with first name, last name, email, title, and LinkedIn URL for each person found. A Split Contacts code node maps the contacts array into individual items so each person flows through the rest of the chain independently.</p>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>Stage 3: First Line Generation </h2>
-    <p>When you have the right contact and a clear reason to reach out, the last problem to solve before sending is personalization, which is where the human touch is required. A first line that references what is actually happening at the company right now is what gets a response. The First Line Generation stage uses Claude to write a personalized opening sentence for each contact based on exactly what triggered the outreach. This helps the AE know what signal was actually detected. </p>
-    <p>A Prepare Outreach Content code node takes the contact name, title, company, signal type, and signal summary and builds a Claude API request. The prompt tells Claude to write a single opening sentence under 30 words addressed to that specific person at that specific company referencing the signal that fired. It also tells Claude who the sender is: a GTM Engineer with 7 years of B2B SaaS sales experience who specializes in building automated revenue systems. Claude generates the sentence and returns it as plain text. A Parse First Line code node extracts the sentence from Claude's response and stores it as first_line.</p>
-  </div>
-
-  <div class="philosophy-section">
-    <h2>Stage 4: Apollo Enrollment (Manual First Touch)</h2>
-    <p>When a contact has a verified email and a personalized first line, the final step is getting them into the outreach sequence without losing control of what actually gets sent. Fully automated sending is the wrong move for a signal based sequence, human judgement is neccessary. The Apollo Enrollment stage solves that by automating everything up to the send and then stopping for a manual review before any email leaves the inbox.</p>
-    <p>An Apollo Create Contact node creates the contact in Apollo using the name, email, title, and company fields flowing in from the previous stage. The generated first line is written to a custom field called First Line using the field ID stored in the Apollo account. Apollo returns a contact ID confirming the record was created successfully. An Apollo Enroll node takes that contact ID and adds the contact to the Signal Sequence. The sequence is configured with a manual email as Step 1, which means the contact sits in the queue but nothing sends until the email is reviewed and approved. The email template opens with a First Line variable that pulls the generated sentence directly into the draft so the personalization is already there when the review happens. Every contact that completes this stage is sitting in Apollo with a verified email, a personalized first line in their record, and a draft email ready to review.</p>
-  </div>
-</div>
-
 <!-- PROJECTS PAGE -->
 <div class="page" id="projects" style="max-width: none;">
   <div class="page-label">Projects / GTM Engineering</div>
@@ -1433,9 +1363,9 @@
       </div>
     </div>
 
-    <div class="project-card" style="cursor: pointer;" onclick="showPage('project3')">
+    <div class="project-card">
       <span class="project-status">Live</span>
-      <h3>Project #3 Signal to Sequence Agent - AQL's &#8594;</h3>
+      <h3>Project #3 Signal to Sequence Agent - AQL's</h3>
       <div class="card-video" onclick="event.stopPropagation()">
         <div class="video-poster" style="background-image: url('project3-thumb.jpg');" onclick="loadVideo(this, '129NH1J1jxYGwE-gDid8u6DYZJkA7Ptkc')">
           <div class="play-btn"></div>
