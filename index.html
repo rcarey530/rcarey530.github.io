@@ -607,8 +607,8 @@
       My Philosophy <span class="arrow">&#9662;</span>
     </button>
     <div class="nav-dropdown-menu">
-      <a onclick="showPage('videoseries')">GTM Video Series</a>
-      <a onclick="showPage('mindset')">GTM Philosophy</a>
+      <a onclick="showPage('videoseries')">My GTM Philosophy</a>
+      <a onclick="showPage('mindset')">Background</a>
       <a onclick="showPage('ninety')">First 90 Days</a>
       <a onclick="showPage('rhythm')">Operating Rhythm</a>
       <a onclick="showPage('orgstructure')">Ideal Org Structure</a>
@@ -631,7 +631,7 @@
       </iframe>
     </div>
     <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-      <button class="video-series-btn" onclick="showPage('videoseries')">GTM Video Series &#8594;</button>
+      <button class="video-series-btn" onclick="showPage('projects')">Projects &#8594;</button>
     </div>
   </div>
 </div>
@@ -1306,7 +1306,8 @@
   <h1 class="page-title">Projects</h1>
   <p class="page-desc">A running log of GTM engineering builds. Each project is a real system built that is actively published.</p>
 
- <div class="project-grid">
+ <div style="display: flex; align-items: center; gap: 24px;">
+  <div class="project-grid" style="flex: 1;">
 
     <div class="project-card" onclick="toggleGoldenList()" style="cursor: pointer;">
       <span class="project-status">Live</span>
@@ -1347,6 +1348,8 @@
       <p>Miro board documenting the end to end architecture for all three projects shown above. Each project is mapped as a staged flow diagram showing how data moves between tools and where automation hands off to human review.</p>
     </div>
 
+  </div>
+  <button class="video-series-btn" onclick="showPage('videoseries')" style="flex-shrink: 0;">My GTM Philosophy &#8594;</button>
   </div>
   <div id="golden-list-container" style="margin-top: 32px; display: none;">
     <div style="font-size: 11px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">
