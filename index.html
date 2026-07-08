@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GTM Engineering Portfolio - Ryan Carey</title>
+<meta name="description" content="GTM Engineering portfolio of Ryan Carey. A live look at the automated, software, and AI driven systems I build to make sales and marketing teams run.">
+<meta property="og:title" content="GTM Engineering Portfolio - Ryan Carey">
+<meta property="og:description" content="An inside look at how I build the automated, software, and AI driven systems that make sales and marketing teams run.">
+<meta property="og:image" content="https://rcarey530.github.io/og-image.jpg">
+<meta property="og:url" content="https://rcarey530.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -437,6 +445,8 @@
 
   @media (max-width: 768px) {
     .project-grid { grid-template-columns: 1fr; }
+    nav { gap: 12px; padding: 0 12px; }
+    .nav-brand, .nav-link, .nav-dropdown-toggle { font-size: 13px; }
   }
 
   .project-card h3 {
@@ -668,6 +678,32 @@
     background: #0e0e0e;
     color: #c9a84c;
   }
+
+  .site-footer {
+    border-top: 1px solid #222;
+    padding: 28px 40px 36px 40px;
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+  }
+
+  .site-footer a {
+    color: #c9a84c;
+    text-decoration: none;
+    margin: 0 10px;
+    border: 1px solid #c9a84c;
+    padding: 5px 14px;
+    display: inline-block;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .site-footer a:hover {
+    background: #c9a84c;
+    color: #0e0e0e;
+  }
 </style>
 </head>
 <body>
@@ -676,10 +712,10 @@
   <div class="nav-brand" onclick="showHome()" style="cursor: pointer;">Home</div>
   <div class="nav-divider"></div>
 
-  <button class="nav-link" onclick="showPage('projects')">Projects</button>
+  <button class="nav-link" data-page="projects" onclick="showPage('projects')">Projects</button>
 
   <div class="nav-divider"></div>
-  <button class="nav-link" onclick="showPage('currentwork')">Current GTM Role</button>
+  <button class="nav-link" data-page="currentwork" onclick="showPage('currentwork')">Current GTM Role</button>
 
   <div class="nav-divider"></div>
   <div class="nav-dropdown">
@@ -716,7 +752,7 @@
 <div class="page" id="mindset" style="max-width: none;">
   <div class="page-label">GTM Engineering / My Background</div>
   <h1 class="page-title" style="color: #ffffff;">My Background</h1>
-  <p class="page-desc">Seven plus years in SaaS, GTM Engineer, and a point of view on how sales and systems should work together in the future of sales.</p>
+  <p class="page-desc">Seven plus years in SaaS, GTM Engineer, and a point of view on how sales and systems should work together.</p>
 
   <div class="accordion">
 
@@ -850,7 +886,7 @@
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> Requests come in from anyone across the org, go into a shared queue, get triaged against current objectives, and either get scheduled into the next sprint or documented for a future cycle so nothing gets lost and nothing gets acted on arbitrarily</li>
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> Work runs in two week sprints, each one scoped and committed to at the start, shipped at the end, which keeps the team moving toward real progress instead of reacting to whatever came in that morning</li>
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> At the end of every sprint release notes go out to the company summarizing what was built, what changed, and what it means for the teams that use it</li>
-          <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> The measure of success is not that the tool exists but that the team operates differently because of it CRM activity, sequence engagement, output utilization, and rep behavior are the signals that tell the real story</li>
+          <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> The measure of success is not that the tool exists but that the team operates differently because of it. CRM activity, sequence engagement, output utilization, and rep behavior are the signals that tell the real story</li>
         </ul>
       </div>
     </div>
@@ -1056,7 +1092,7 @@
 
   <div style="display: flex; align-items: center; gap: 56px; margin-bottom: 56px; flex-wrap: wrap;">
     <h1 style="flex: 1; min-width: 320px; font-size: 46px; font-weight: 600; color: #e8e8e8; line-height: 1.1; letter-spacing: -0.02em; margin: 0;">Free Thinkers Consulting</h1>
-    <p style="flex: 1; min-width: 320px; color: #888; font-size: 14px; line-height: 1.85; margin: 0;"></p>
+    <p style="flex: 1; min-width: 320px; color: #888; font-size: 14px; line-height: 1.85; margin: 0;">I am building the entire go to market function at a Salesforce implementation partner from the ground up, turning a referral driven business into one with predictable and repeatable revenue channels.</p>
   </div>
 
   <div class="cs-section">
@@ -1141,13 +1177,13 @@
   <div class="cs-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
     <h2>The Results</h2>
     <div class="cs-body">
-      <p style="color: #888; font-size: 14px; line-height: 1.85;">The motion is active and pipeline is being built across all three channels. The infrastructure is live.</p>
+      <p style="color: #888; font-size: 14px; line-height: 1.85;">The infrastructure is live and producing across all three channels, and the numbers below are the output of a motion that did not exist before this build.</p>
     </div>
   </div>
 
   <div class="stats-row" style="margin-top: 40px; margin-bottom: 0;">
     <div class="stat">
-      <div class="stat-num">$82K ARR</div>
+      <div class="stat-num">$82K</div>
       <div class="stat-label">Avg Pipeline Added Per Month</div>
     </div>
     <div class="stat">
@@ -1170,7 +1206,7 @@
 <div class="page" id="projects" style="max-width: none;">
   <div class="page-label">Projects / GTM Engineering</div>
   <h1 class="page-title">Projects</h1>
-  <p class="page-desc">A running log of GTM engineering builds. Each project is a real system built that is actively published.</p>
+  <p class="page-desc">A running log of GTM engineering builds. Each project is a real system that is live and actively running.</p>
 
   <div class="project-grid">
 
@@ -1275,6 +1311,14 @@
   </div>
 </div>
 
+<footer class="site-footer">
+  <div style="color: #888; font-size: 13px; font-weight: 500; margin-bottom: 12px;">Ryan Carey &#183; GTM Engineer &#183; San Diego, CA</div>
+  <div>
+    <a href="mailto:ryanmcarey530@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/ryan-carey-461a11161/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
 <script>
   function showPage(id) {
     document.getElementById('home').style.display = 'none';
@@ -1282,6 +1326,13 @@
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(l => {
+      if (l.dataset.page === id) l.classList.add('active');
+    });
+    if (id === 'videoseries' || id === 'mindset' || id === 'workflow') {
+      document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.add('active'));
+    }
+    window.scrollTo(0, 0);
   }
 
   function showHome() {
@@ -1289,6 +1340,7 @@
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.remove('active'));
     document.getElementById('home').style.display = 'flex';
+    window.scrollTo(0, 0);
   }
 
   function loadVideo(el, id) {
