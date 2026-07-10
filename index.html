@@ -1221,10 +1221,10 @@
       </div>
     </div>
 
-    <div class="project-card" style="cursor: pointer;" onclick="window.open('https://gtm-analytics-production.up.railway.app', '_blank')">
+    <div class="project-card" style="cursor: pointer;" onclick="openAnalytics()">
       <span class="project-status">Live</span>
-      <h3>Project #2 GTM Analytics Query Interface &#8599;</h3>
-      <p>A deployed analytics app to query Project #1's results in SQL.</p>
+      <h3>Project #2 GTM Analytics Query Interface</h3>
+      <p>A deployed analytics app to query Project #1's results in SQL. Output kept private, it is my actual job search data.</p>
       <div class="card-video" onclick="event.stopPropagation()">
         <div class="video-poster" style="background-image: url('project2-thumb.jpg');" onclick="loadVideo(this, '1k8IWyd6ruCKHkZLFPV7oDxKUhqPuYvBi')">
           <div class="play-btn"></div>
@@ -1377,6 +1377,11 @@
     } else {
       container.style.display = 'none';
     }
+  }
+
+  function openAnalytics() {
+    if (!hasListKey()) return;
+    window.open('https://gtm-analytics-production.up.railway.app/?key=rc530', '_blank');
   }
 
   function toggleFeedback(index) {
