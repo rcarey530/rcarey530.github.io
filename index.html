@@ -873,7 +873,7 @@
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> <strong style="color: #c9a84c; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Days 1-30</strong> The first month is not about building anything, it is about understanding everything: why you are winning, why you are losing, who has already bought and why, how the competitive landscape actually looks, and whether the tools in place are working together or just sitting next to each other</li>
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> <strong style="color: #c9a84c; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Days 30-60</strong> The ICP gets defined in full, the golden list gets built as the first real deliverable, and a full tech stack audit gets completed and presented to leadership with a clear picture of what is broken, what it is costing, and what it looks like when it is fixed</li>
           <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> <strong style="color: #c9a84c; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Days 60-90</strong> The orchestration layer gets built, tools get connected and passing clean data to each other, and the first sequences go out against the golden list with messaging built on what was learned in month one</li>
-          <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; border-bottom: 1px solid #1a1a1a; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> <strong style="color: #c9a84c; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Day 90+</strong> By day 90 the reps know exactly what accounts to work and why, the tools are connected and passing clean data, leadership has a dashboard that reflects what is actually happening in pipeline, and the urgency to keep improving is embedded in how the team operates every day</li>
+          <li style="color: #888; font-size: 14px; line-height: 1.85; padding: 10px 0; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #c9a84c;">&#8594;</span> <strong style="color: #c9a84c; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Day 90+</strong> By day 90 the reps know exactly what accounts to work and why, the tools are connected and passing clean data, leadership has a dashboard that reflects what is actually happening in pipeline, and the urgency to keep improving is embedded in how the team operates every day</li>
         </ul>
       </div>
     </div>
@@ -1212,7 +1212,8 @@
 
     <div class="project-card" onclick="toggleGoldenList()" style="cursor: pointer;">
       <span class="project-status">Live</span>
-      <h3>Project #1 Weekly GTM Job Search List &#8595;</h3>
+      <h3>Project #1 Weekly GTM Job Search List</h3>
+      <p>A live weekly pipeline that sources, scores, and ranks GTM roles against my ICP with a self-improving feedback loop. Output kept private, it is my actual job search.</p>
       <div class="card-video" onclick="event.stopPropagation()">
         <div class="video-poster" style="background-image: url('project1-thumb.jpg');" onclick="loadVideo(this, '1qqWj2_k-VLWkXxmc9d2D3E71VlXEpC3s')">
           <div class="play-btn"></div>
@@ -1258,46 +1259,52 @@
   </div>
 
   <script>
-    fetch('weekly-scored-jobs.json')
-      .then(r => r.json())
-      .then(data => {
-        if (data.lastUpdated) {
-          const date = new Date(data.lastUpdated);
-          document.getElementById('golden-list-date').textContent = 'Updated ' + date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-        }
-        if (!data.jobs || data.jobs.length === 0) {
-          document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">No jobs loaded yet. Check back Wednesday.</p>';
-          return;
-        }
-        const rows = data.jobs.map((job, index) => `
-          <div class="job-row">
-            <div>
-              <div class="job-company">${job.company}</div>
-              <div class="job-title">${job.jobTitle}</div>
-              <div class="job-location">${job.location}</div>
-            </div>
-            <div>
-              <div class="job-reason">${job.reason || ''}</div>
-            </div>
-            <div class="job-meta">
-              <div class="job-tier">Tier ${job.score || ''}</div>
-              <div class="job-stat">${job.employees ? Number(job.employees).toLocaleString() + ' employees' : ''}</div>
-              <div class="job-stat">${job.funding ? '$' + Number(job.funding).toLocaleString() + ' raised' : ''}</div>
-              ${job.jobUrl ? `<a href="${job.jobUrl}" target="_blank" class="job-link">View Job</a>` : ''}
-              <button class="feedback-btn" onclick="toggleFeedback(${index})">Not a Fit</button>
-              <div class="feedback-form" id="feedback-${index}">
-                <textarea id="reason-${index}" placeholder="Why is this not a fit?"></textarea>
-                <button class="feedback-submit" onclick="submitFeedback(${index}, '${job.company.replace(/'/g, "\\'")}', '${job.jobTitle.replace(/'/g, "\\'")}', '${job.score || ''}')">Submit</button>
-                <div class="feedback-sent" id="sent-${index}"></div>
+    function hasListKey() {
+      return new URLSearchParams(window.location.search).get('key') === 'rc530';
+    }
+
+    if (hasListKey()) {
+      fetch('weekly-scored-jobs.json')
+        .then(r => r.json())
+        .then(data => {
+          if (data.lastUpdated) {
+            const date = new Date(data.lastUpdated);
+            document.getElementById('golden-list-date').textContent = 'Updated ' + date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+          }
+          if (!data.jobs || data.jobs.length === 0) {
+            document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">No jobs loaded yet. Check back Wednesday.</p>';
+            return;
+          }
+          const rows = data.jobs.map((job, index) => `
+            <div class="job-row">
+              <div>
+                <div class="job-company">${job.company}</div>
+                <div class="job-title">${job.jobTitle}</div>
+                <div class="job-location">${job.location}</div>
+              </div>
+              <div>
+                <div class="job-reason">${job.reason || ''}</div>
+              </div>
+              <div class="job-meta">
+                <div class="job-tier">Tier ${job.score || ''}</div>
+                <div class="job-stat">${job.employees ? Number(job.employees).toLocaleString() + ' employees' : ''}</div>
+                <div class="job-stat">${job.funding ? '$' + Number(job.funding).toLocaleString() + ' raised' : ''}</div>
+                ${job.jobUrl ? `<a href="${job.jobUrl}" target="_blank" class="job-link">View Job</a>` : ''}
+                <button class="feedback-btn" onclick="toggleFeedback(${index})">Not a Fit</button>
+                <div class="feedback-form" id="feedback-${index}">
+                  <textarea id="reason-${index}" placeholder="Why is this not a fit?"></textarea>
+                  <button class="feedback-submit" onclick="submitFeedback(${index}, '${job.company.replace(/'/g, "\\'")}', '${job.jobTitle.replace(/'/g, "\\'")}', '${job.score || ''}')">Submit</button>
+                  <div class="feedback-sent" id="sent-${index}"></div>
+                </div>
               </div>
             </div>
-          </div>
-        `).join('');
-        document.getElementById('golden-list-table').innerHTML = rows;
-      })
-      .catch(() => {
-        document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">Unable to load job data.</p>';
-      });
+          `).join('');
+          document.getElementById('golden-list-table').innerHTML = rows;
+        })
+        .catch(() => {
+          document.getElementById('golden-list-table').innerHTML = '<p style="color: #444; font-size: 13px;">Unable to load job data.</p>';
+        });
+    }
   </script>
 
   <div class="project-card" onclick="showPage('currentwork')" style="cursor: pointer; margin-top: 56px;">
@@ -1360,6 +1367,7 @@
   }
 
   function toggleGoldenList() {
+    if (!hasListKey()) return;
     const container = document.getElementById('golden-list-container');
     if (container.style.display === 'none') {
       container.style.display = 'block';
