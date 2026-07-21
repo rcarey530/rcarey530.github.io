@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T15:00:50.097Z",
+  "lastUpdated": "2026-07-21T15:00:55.808Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -140,6 +140,26 @@
     {
       "pattern": "GTM Engineer roles at well-aligned companies located outside San Diego but remote-friendly",
       "action": "Score 1 (Apply) - strong role fit outweighs non-San Diego location when remote work is available",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Apparel and Fashion companies",
+      "action": "Score 3 (Skip) - candidate does not want to work in apparel and fashion vertical",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Director level roles requiring 10+ years experience and 5+ years management experience",
+      "action": "Score 3 (Skip) - candidate is not at director level yet",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Revenue Operations roles focused primarily on data governance and system integrity rather than GTM building",
+      "action": "Score 3 (Skip) - candidate is looking for GTM infrastructure building, not data governance administration",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Revenue Operations Manager roles that lack GTM Engineering components like automated infrastructure, outbound campaigns, and buying signal automation",
+      "action": "Score 2 (Monitor) - evaluate if role has GTM Engineering elements or is purely traditional RevOps",
       "source": "feedback"
     }
   ],
