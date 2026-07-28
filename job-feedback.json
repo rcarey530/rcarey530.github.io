@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-21T15:00:55.808Z",
+  "lastUpdated": "2026-07-28T15:01:07.331Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -160,6 +160,16 @@
     {
       "pattern": "Revenue Operations Manager roles that lack GTM Engineering components like automated infrastructure, outbound campaigns, and buying signal automation",
       "action": "Score 2 (Monitor) - evaluate if role has GTM Engineering elements or is purely traditional RevOps",
+      "source": "feedback"
+    },
+    {
+      "pattern": "GTM Systems Engineer roles that lean heavily toward traditional Revenue Operations",
+      "action": "Score 2 (Monitor) - candidate prefers GTM Engineer roles over pure RevOps roles, evaluate scope of automation and infrastructure building",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Senior Manager level roles at large enterprises",
+      "action": "Score 3 (Skip) - candidate is looking for GTM Engineer or forward deployed engineer style roles, not senior management positions",
       "source": "feedback"
     }
   ],
