@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-28T15:01:07.331Z",
+  "lastUpdated": "2026-08-04T15:01:09.926Z",
   "icpCriteria": {
     "targetTitles": [
       "GTM Engineer",
@@ -170,6 +170,11 @@
     {
       "pattern": "Senior Manager level roles at large enterprises",
       "action": "Score 3 (Skip) - candidate is looking for GTM Engineer or forward deployed engineer style roles, not senior management positions",
+      "source": "feedback"
+    },
+    {
+      "pattern": "Large enterprise companies like Amazon regardless of role fit",
+      "action": "Score 3 (Skip) - candidate does not want to work for companies at Amazon's scale",
       "source": "feedback"
     }
   ],
